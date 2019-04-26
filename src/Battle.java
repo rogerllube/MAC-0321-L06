@@ -1,4 +1,6 @@
 
-public class Battle {
+public class Battle extends Event {
+	
+	
 
 }
