@@ -1,7 +1,7 @@
 
 public class Trainer {
-	public String name;
-	public int pokmnLeft;
-	public int item;
-	public Pokemon[] Pokmn;
+	private String name;
+	private int pokmnLeft;
+	private int item;
+	private Pokemon[] Pokmn;
 }
