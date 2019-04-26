@@ -5,7 +5,7 @@ import java.util.Scanner;
 abstract class Searcher{
 
 
-
+ 
 	public static Pokemon pesquisaPoke() {
 		    System.out.println("Digite o nome do pokemon");
 			File file = new File("data.txt");
