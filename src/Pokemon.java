@@ -1,11 +1,13 @@
 
 abstract public class Pokemon {
-	public String type;
-	public String[] move;
-	public int hp;
-	public int attack;
-	public int defense;
-	public int spAttack;
-	public int spDefense;
-	public int speed;
+	
+	private String type1, type2;
+	private String[] move;
+	private int dexNumber;
+	private int hp;
+	private int attack;
+	private int defense;
+	private int spAttack;
+	private int spDefense;
+	private int speed;
 }
