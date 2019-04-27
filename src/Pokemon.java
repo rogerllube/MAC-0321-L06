@@ -2,7 +2,7 @@ public class Pokemon {
 	
 	private String name;
 	private int type1, type2;
-	private String[] move;
+	private Move[] move;
 	private int dexNumber;
 	private int hp,hpMAX;
 	private int attack;
@@ -22,5 +22,45 @@ public class Pokemon {
 		spDefense = spdef;
 		this.speed = speed;
 		this.name = name;
+	}
+	
+	public int getType1() {
+		return type1;
+	}
+	
+	public int getType2() {
+		return type2;
+	}
+	
+	public int getDex() {
+		return dexNumber;
+	}
+	
+	public int getHp() {
+		return hp;
+	}
+	
+	public int getHpMAX() {
+		return hpMAX;
+	}
+	
+	public int getAttack() {
+		return attack;
+	}
+	
+	public int getDefense() {
+		return defense;
+	}
+	
+	public int getSpAttack() {
+		return spAttack;
+	}
+	
+	public int getSpDefense() {
+		return spDefense;
+	}
+	
+	public int getSpeed() {
+		return speed;
 	}
 }
