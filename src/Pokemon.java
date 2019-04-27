@@ -31,6 +31,10 @@ public class Pokemon {
 		move[3] = d;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
 	public int getType1() {
 		return type1;
 	}

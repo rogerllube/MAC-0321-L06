@@ -3,8 +3,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 abstract class Searcher{
-
-
  
 	public static Pokemon pesquisaPoke() {
 		    System.out.println("Digite o nome do pokemon");
