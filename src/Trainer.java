@@ -17,7 +17,7 @@ public class Trainer {
 		while(Pokmn[i] != null) {
 			i++;
 		}
-		Pokmn[i] = Searcher.pesquisaPoke();
+		Pokmn[i] = Searcher.pesquisaPoke(poke);
 		if(Pokmn[i] == null) {
 			return false;
 		}

@@ -1,0 +1,16 @@
+bulbasaur
+charmeleon 
+charizard
+charmanden
+
+
+charmander
+4
+8
+-1
+39
+52
+43
+60
+50
+65
