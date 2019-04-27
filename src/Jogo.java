@@ -37,6 +37,8 @@ public class Jogo {
 			}
 		
 		}
+		Lista.listar();
+		
 		
 
 		scanner.close();
