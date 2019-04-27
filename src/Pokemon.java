@@ -2,7 +2,7 @@ public class Pokemon {
 	
 	private String name;
 	private int type1, type2;
-	private Move[] move;
+	private Move[] move = new Move[4];
 	private int dexNumber;
 	private int hp,hpMAX;
 	private int attack;
@@ -22,6 +22,13 @@ public class Pokemon {
 		spDefense = spdef;
 		this.speed = speed;
 		this.name = name;
+	}
+	
+	public void setMove(Move a, Move b, Move c, Move d) {
+		move[0] = a;
+		move[1] = b;
+		move[2] = c;
+		move[3] = d;
 	}
 	
 	public int getType1() {
