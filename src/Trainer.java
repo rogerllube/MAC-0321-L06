@@ -75,4 +75,8 @@ public class Trainer {
 			Pokmn[n] = null;
 		}
 	}
+
+	public void setLead(int lead) {
+		
+	}
 }
