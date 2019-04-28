@@ -67,12 +67,13 @@ public class Jogo {
 		String sure, newPoke;
 		int remove;
 		sure = scanner.next();
-		System.out.println(sure);
+		
+
 		while (sure.equals("a")) {
 			System.out.println(name + ", digite o numero do Pokemon que deseja alterar");
 			remove = scanner.nextInt();
-			//ja.removePoke(remove);
-			System.out.println(name +", digite n para adicionar um novo Pokemon ou qualquer outra coisa para nao adicionar");
+			ja.removePoke(remove, scanner);
+			System.out.println(name +", digite n para adicionar um novo Pokemon no lugar do removido ou qualquer outra coisa para nao adicionar");
 			newPoke = scanner.next();
 			if(newPoke.equals("n")) {
 				System.out.println(name +", digite o nome do Pokemon desejado");
@@ -85,7 +86,7 @@ public class Jogo {
 				}
 				System.out.println("Pokemon alterado com sucesso. Seus novos Pokemon sao:");
 				ja.getPokeList();
-				System.out.println("Digite a para fazer mais ou qualquer outra tecla para finalizar");
+				System.out.println("Digite a para fazer mais alteracoes ou qualquer outra tecla para finalizar");
 				sure = scanner.next();
 				
 				
@@ -112,26 +113,31 @@ public class Jogo {
 		System.out.println(name2 + ", digite a para alterar algum dos Pokemon ou qualquer outra tecla para confirmar");
 		sure = scanner.next();
 		while (sure.equals("a")) {
-			System.out.println(name2 + ", digite o numero do Pokemon que deseja alterar");
-			remove =scanner.nextInt();
-			//jb.removePoke(remove);
-			System.out.println(name2 +", digite n para adicionar um novo Pokemon ou qualquer outra coisa para nao adicionar");
+			System.out.println(name + ", digite o numero do Pokemon que deseja alterar");
+			remove = scanner.nextInt();
+			jb.removePoke(remove, scanner);
+			System.out.println(name +", digite n para adicionar um novo Pokemon no lugar do removido ou qualquer outra coisa para nao adicionar");
 			newPoke = scanner.next();
 			if(newPoke.equals("n")) {
-				System.out.println(name2 +", digite o nome do Pokemon desejado");
+				System.out.println(name +", digite o nome do Pokemon desejado");
 				nomePoke = scanner.next();
-				succ = ja.addPokemon(nomePoke);
+				succ = jb.addPokemon(nomePoke);
 				while(succ == false) {
 					System.out.println("Nome invalido, digite novamente");
 					nomePoke = scanner.next();
 					succ = jb.addPokemon(nomePoke);
 				}
+				System.out.println("Pokemon alterado com sucesso. Seus novos Pokemon sao:");
+				jb.getPokeList();
+				System.out.println("Digite a para fazer mais alteracoes ou qualquer outra tecla para finalizar");
+				sure = scanner.next();
 			}
 		}
 		
-		
-
 		scanner.close();
+
+		
+		
 	}
 
 	

@@ -38,16 +38,15 @@ public class Trainer {
 		}
 	}
 	
-	public void removePoke(int n) {
+	public void removePoke(int n, Scanner scan) {
 		boolean conf = true;
 		String cfm;
-		Scanner scanner = new Scanner(System.in);
-		while(Pokmn[n] != null && conf) {
+		while((Pokmn[n] == null && conf) || n>6) {
 			System.out.println("Número inválido, deseja remover pokémon? Digite s para confirmar ou qualquer outra coisa para alterar.");
-			cfm = scanner.next();
+			cfm = scan.next();
 			if(cfm.equals("s")) {
-				System.out.println("Digite o número do pokémon a sr removido");
-				n = scanner.nextInt();
+				System.out.println("Digite o número do pokémon a ser removido");
+				n = scan.nextInt();
 			}
 			else {
 				conf = false;
@@ -57,24 +56,23 @@ public class Trainer {
 			String nome = Pokmn[n].getName();
 			System.out.println("Pokémon a ser removido: " +nome);
 			System.out.println("Tem certeza que quer remover " +nome+ "? Digite s para confirmar ou qualquer outra coisa para alterar.");
-			cfm = scanner.next();
+			cfm = scan.next();
 			while(!cfm.equals("s")) {
 				System.out.println("Se não quiser mais alterar pokémon, digite s");
-				cfm = scanner.next();
+				cfm = scan.next();
 				if(cfm.equals("s")) {
-					scanner.close();
+					scan.close();
 					return;
 				}
 				System.out.println("Digite o número do pokémon a ser removido");
-				n = scanner.nextInt();
+				n = scan.nextInt();
 				nome = Pokmn[n].getName();
 				System.out.println("Pokémon a ser removido: " +nome);
 				System.out.println("Tem certeza que quer remover " +nome+ "? Digite s para confirmar ou qualquer outra coisa para alterar.");
-				cfm = scanner.next();
+				cfm = scan.next();
 			}
 			System.out.println("Pokémon " +nome+ " removido com sucesso");
 			Pokmn[n] = null;
 		}
-		scanner.close();
 	}
 }
