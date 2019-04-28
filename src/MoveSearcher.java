@@ -4,18 +4,14 @@ import java.util.Scanner;
 
 abstract class MoveSearcher {
 	
-	public Move pesquisaMove() {
+	public static Move pesquisaMove(String name) {
 		System.out.println("Digite o nome do move");
 		File file = new File("MoveList.txt");
 		Move mov;
-
-	    Scanner kb = new Scanner(System.in);
-
-	    String name = kb.next();
-	    Scanner scanner;
+	    Scanner scanner = null;
 	    int type, dam, phys; 
 	    try {
-	        scanner = new Scanner(file).useDelimiter( ",");
+	        scanner = new Scanner(file);
 
 	        while (scanner.hasNext()) {
 	            final String lineFromFile = scanner.nextLine();
@@ -25,6 +21,7 @@ abstract class MoveSearcher {
 	                dam = Integer.parseInt(scanner.nextLine());
 	                phys = Integer.parseInt(scanner.nextLine());
 	                mov = new Move(name, type, dam, phys);
+	                scanner.close();
 	                return mov;
 	            }
 	        }
