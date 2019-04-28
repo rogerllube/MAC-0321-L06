@@ -133,24 +133,26 @@ public class Jogo {
 				sure = scanner.next();
 			}
 		}
+		System.out.println("Seu time e:");
 		ja.getPokeList();
 		System.out.println(name +", digite o numero do pokemon que vai comecar em campo");
 		int lead = scanner.nextInt();
-		ja.setLead(lead);
+		ja.setAtivo(lead, scanner);
+		System.out.println("Seu time e:");
 		jb.getPokeList();
 		System.out.println(name2 + ", digite o numero do pokemon que vai comecar em campo");
 		lead = scanner.nextInt();
-		jb.setLead(lead);
+		jb.setAtivo(lead, scanner);
 		
 		int turno;
-		for(turno = 1; !acabou; turno++) {
-			System.out.println(name"");
-			
-			
-			
-			
-			
-			
+		String acao;
+		boolean acabou = false;
+		for(turno = 1; acabou = false; turno++) {
+			System.out.println(name+" digite a para selecionar um ataque, p para trocar de Pokemon, i para usar um item ou f para fugir");
+			acao = scanner.next();
+			if(acao.equals("a")) {
+				ja.selAtk();
+			}
 			
 		}
 		scanner.close();
