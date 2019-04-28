@@ -4,23 +4,17 @@ import java.util.Scanner;
 
 abstract class Searcher{
  
-	public static Pokemon pesquisaPoke() {
-		    System.out.println("Digite o nome do pokemon");
-			File file = new File("data.txt");
+	public static Pokemon pesquisaPoke(String name) {
+			File file = new File("dex.txt");
 			Pokemon poke;
-
-		    Scanner kb = new Scanner(System.in);
-
-		    String name = kb.next();
-		    Scanner scanner;
+		    Scanner scanner = null;
 		    int dexN, type1, type2, hp, atk, def, spatk, spdef, speed; 
 		    try {
-		        scanner = new Scanner(file).useDelimiter( ",");
+		        scanner = new Scanner(file);
 
 		        while (scanner.hasNext()) {
 		            final String lineFromFile = scanner.nextLine();
 		            if (lineFromFile.contains(name)) {
-		                System.out.println("I found " + name);
 		                dexN = Integer.parseInt(scanner.nextLine());
 		                type1 = Integer.parseInt(scanner.nextLine());
 		                type2 = Integer.parseInt(scanner.nextLine());
@@ -31,13 +25,16 @@ abstract class Searcher{
 		                spdef = Integer.parseInt(scanner.nextLine());
 		                speed = Integer.parseInt(scanner.nextLine());
 		                poke = new Pokemon(name, dexN, type1, type2, hp, atk, def, spatk, spdef, speed);
+		                scanner.close();
 		                return poke;
 		            }
 		        }
 		    } catch (IOException e) {
 		        System.out.println(" cannot write to file " + file.toString());
 		    	}
-			return null;
+		    
+		    return null;
+			
 	}
 }
 
