@@ -15,10 +15,11 @@ public class Trainer {
 	
 	public boolean addPokemon(String poke) {
 		int i = 0;
+		name = Pokmn[i].getName();
 		while(Pokmn[i] != null) {
 			i++;
 		}
-		Pokmn[i] = Searcher.pesquisaPoke();
+		Pokmn[i] = Searcher.pesquisaPoke(name);
 		if(Pokmn[i] == null) {
 			return false;
 		}
