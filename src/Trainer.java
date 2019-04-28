@@ -10,6 +10,7 @@ public class Trainer {
 		for(int i = 0; i < 7; i++) {
 			Pokmn[i] = null;
 		}
+		pokmnLeft = 0;
 	}
 	
 	public boolean addPokemon(String poke) {
@@ -22,7 +23,17 @@ public class Trainer {
 			return false;
 		}
 		else
+			pokmnLeft++;
 			return true;
 		
 	}
+	
+	public void getPokeList() {
+		int i = 0;
+		while(i < 7 && Pokmn[i] != null) {
+			String name = Pokmn[i].getName();
+			System.out.println(""+name);
+		}
+	}
+
 }
