@@ -97,7 +97,7 @@ public class Jogo {
 			done = scanner.next();
 		}
 		System.out.println(name2 +", seus Pokemon sao:");
-		//jb.getPokeList();
+		jb.getPokeList();
 		System.out.println(name2 + ", digite a para alterar algum dos Pokemon ou qualquer outra tecla para confirmar");
 		sure = scanner.next();
 		while (sure == "a") {
