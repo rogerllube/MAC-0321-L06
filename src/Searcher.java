@@ -14,7 +14,7 @@ abstract class Searcher{
 
 		        while (scanner.hasNext()) {
 		            final String lineFromFile = scanner.nextLine();
-		            if (lineFromFile.contains(name)) {
+		            if (lineFromFile.equals(name)) {
 		                dexN = Integer.parseInt(scanner.nextLine());
 		                type1 = Integer.parseInt(scanner.nextLine());
 		                type2 = Integer.parseInt(scanner.nextLine());
