@@ -150,10 +150,75 @@ public class Jogo {
 		for(turno = 1; acabou = false; turno++) {
 			System.out.println(name+" digite a para selecionar um ataque, p para trocar de Pokemon, i para usar um item ou f para fugir");
 			acao = scanner.next();
-			if(acao.equals("a")) {
-				ja.selAtk();
+			while(!acao.equals("a") && !acao.equals("p") && !acao.equals("i") && !acao.equals("f")) {
+				System.out.println("Ação inválida, digite a para selecionar um ataque, p para trocar de Pokemon, i para usar um item ou f para fugir");
 			}
-			
+			con = false;
+			while(con == false) {
+				if(acao.equals("a")) {
+					System.out.println("Se quiser mudar de ação, digite m");
+					cfm = scanner.next();
+					if(!cfm.equals("m")) {
+						con = true;
+						ja.selAtk();
+					}
+				}
+				else if(acao.equals("p")) {
+					System.out.println("Se quiser mudar de ação, digite m");
+					cfm = scanner.next();
+					if(!cfm.equals("m")) {
+						con = true;
+						ja.selPoke(scanner);
+					}
+				}
+				if(acao.equals("i")) {
+					System.out.println("Se quiser mudar de ação, digite m");
+					cfm = scanner.next();
+					if(!cfm.equals("m")) {
+						con = true;
+						ja.selItem();
+					}
+				}
+				if(acao.equals("f")) {
+					Fugir.action();
+				}
+			}
+			System.out.println(name2+" digite a para selecionar um ataque, p para trocar de Pokemon, i para usar um item ou f para fugir");
+			acao = scanner.next();
+			while(!acao.equals("a") && !acao.equals("p") && !acao.equals("i") && !acao.equals("f")) {
+				System.out.println("Ação inválida, digite a para selecionar um ataque, p para trocar de Pokemon, i para usar um item ou f para fugir");
+			}con = false;
+			while(con == false) {
+				if(acao.equals("a")) {
+					System.out.println("Se quiser mudar de ação, digite m");
+					cfm = scanner.next();
+					if(!cfm.equals("m")) {
+						con = true;
+						jb.selAtk();
+					}
+				}
+				else if(acao.equals("p")) {
+					System.out.println("Se quiser mudar de ação, digite m");
+					cfm = scanner.next();
+					if(!cfm.equals("m")) {
+						con = true;
+						jb.selPoke(scanner);
+					}
+				}
+				if(acao.equals("i")) {
+					System.out.println("Se quiser mudar de ação, digite m");
+					cfm = scanner.next();
+					if(!cfm.equals("m")) {
+						con = true;
+						jb.selItem();
+					}
+				}
+				if(acao.equals("f")) {
+					Fugir.action();
+				}
+			}
+			// Classe Prioridade(Trainer ja, TRainer jb)(?)
+			// para determinar que evento será realizado primeiro
 		}
 		scanner.close();
 
