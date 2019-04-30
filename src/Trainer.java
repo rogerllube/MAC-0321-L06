@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Trainer {
 	private String name;
@@ -115,31 +116,21 @@ public class Trainer {
 	public void setAtivo(int ativo) {
 		while(ativo>index||ativo<1||pokmn[ativo].getHp()==0) {
 			System.out.println("Numero invalido, escolha outro.");
-			ativo = Math.ra;
+			ativo =;
 		}
 		System.out.println("O pokemon que entrara na batalha e: "+ pokmn[ativo].getName());
 		activePoke = ativo;
 	}
 	
-	public void selPoke(Scanner scanner) {
-		boolean con = false;
-		String cfm;
+	public void selPoke(){
 		this.getPokeList();
-		System.out.println("Digite o número do pokémon que deseja usar:");
-		changePoke = scanner.nextInt(); //changePoke armazena o pokemon que será trocado para posteriormente ser utilizado no Event
-		while(con == false) {
-			System.out.println("O pokémon que será utilizado será" +pokmn[changePoke]+ ". Digite s para confirmar e qualquer outra tecla para ecolher outro");
-			cfm = scanner.next();
-			if(cfm.equals("s")) {
-				con = true;
-			}
-			else {
-				this.getPokeList();
-				System.out.println("Digite o número do pokémon que deseja usar:");
-				changePoke = scanner.nextInt();
-			}
+		do {
+			changePoke = ThreadLocalRandom.current().nextInt(1, 6+1);
+			
+		} while(pokmn[changePoke].getHp()==0);
+		System.out.println("O pokémon que será utilizado será" +pokmn[changePoke]);
+		
 		}
-	}
 	
 	public void changePoke() {
 		Pokemon newAtivo, oldAtivo;
