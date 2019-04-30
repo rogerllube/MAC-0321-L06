@@ -7,6 +7,7 @@ public class Trainer {
 	private Pokemon[] pokmn =  new Pokemon[7];
 	private int index;
 	private int activePoke;
+	private int changePoke;
 	
 	public Trainer (String nome) {
 		name = nome;
@@ -92,4 +93,25 @@ public class Trainer {
 		System.out.println("O pokemon que entrara na batalha e: "+ pokmn[ativo].getName());
 		activePoke = ativo;
 	}
+	
+	public void selPoke(Scanner scanner) {
+		boolean con = false;
+		String cfm;
+		this.getPokeList();
+		System.out.println("Digite o número do pokémon que deseja usar:");
+		changePoke = scanner.nextInt(); //changePoke armazena o pokemon que será trocado para posteriormente ser utilizado no Event
+		while(con = false) {
+			System.out.println("O pokémon que será utilizado será" +pokmn[changePoke]+ ". Digite s para confirmar e qualquer outra tecla para ecolher outro");
+			cfm = scanner.next();
+			if(cfm.equals("s")) {
+				con = true;
+			}
+			else {
+				this.getPokeList();
+				System.out.println("Digite o número do pokémon que deseja usar:");
+				changePoke = scanner.nextInt();
+			}
+		}
+	}
+	
 }
