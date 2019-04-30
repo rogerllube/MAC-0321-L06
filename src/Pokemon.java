@@ -74,4 +74,8 @@ public class Pokemon {
 	public int getSpeed() {
 		return speed;
 	}
+	
+	public void setHp(int life) {
+		this.hp = life;
+	}
 }
