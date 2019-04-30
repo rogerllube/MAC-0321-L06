@@ -146,8 +146,9 @@ public class Jogo {
 		
 		int turno;
 		String acao;
-		boolean acabou = false;
-		for(turno = 1; acabou = false; turno++) {
+		boolean acabouA = ja.getOver();
+		boolean acabouB = jb.getOver();
+		for(turno = 1; acabouA == false && acabouB == false; turno++) {
 			System.out.println(name+" digite a para selecionar um ataque, p para trocar de Pokemon, i para usar um item ou f para fugir");
 			acao = scanner.next();
 			while(!acao.equals("a") && !acao.equals("p") && !acao.equals("i") && !acao.equals("f")) {

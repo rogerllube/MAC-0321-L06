@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class Trainer {
 	private String name;
 	private int pokmnLeft;
-	private int[] item;
+	private Item[] item;
 	private Pokemon[] pokmn =  new Pokemon[7];
 	private int index;
 	private int activePoke;
 	private int changePoke;
+	private boolean acabou;
 	
 	public Trainer (String nome) {
 		name = nome;
@@ -16,6 +17,32 @@ public class Trainer {
 		}
 		pokmnLeft = 0;
 		index = 0;
+		acabou = false;
+		for(int i = 0; i < 6; i++) {
+			item[i].setName("potion");
+			item[i].setQuant(1);
+			item[i].setRec(20);
+		}
+	}
+	
+	public void setOver(boolean over) {
+		acabou = over;
+	}
+	
+	public boolean getOver() {
+		return acabou;
+	}
+	
+	public String getName() {
+		return name;
+	}
+		
+	public int getChange() {
+		return changePoke;
+	}
+	
+	public int getActive() {
+		return activePoke;
 	}
 	
 	public boolean addPokemon(String poke) {
@@ -85,10 +112,10 @@ public class Trainer {
 		}
 	}
 
-	public void setAtivo(int ativo, Scanner scanner) {
+	public void setAtivo(int ativo) {
 		while(ativo>index||ativo<1||pokmn[ativo].getHp()==0) {
 			System.out.println("Numero invalido, escolha outro.");
-			ativo = scanner.nextInt();
+			ativo = Math.ra;
 		}
 		System.out.println("O pokemon que entrara na batalha e: "+ pokmn[ativo].getName());
 		activePoke = ativo;
@@ -100,7 +127,7 @@ public class Trainer {
 		this.getPokeList();
 		System.out.println("Digite o número do pokémon que deseja usar:");
 		changePoke = scanner.nextInt(); //changePoke armazena o pokemon que será trocado para posteriormente ser utilizado no Event
-		while(con = false) {
+		while(con == false) {
 			System.out.println("O pokémon que será utilizado será" +pokmn[changePoke]+ ". Digite s para confirmar e qualquer outra tecla para ecolher outro");
 			cfm = scanner.next();
 			if(cfm.equals("s")) {
@@ -112,6 +139,22 @@ public class Trainer {
 				changePoke = scanner.nextInt();
 			}
 		}
+	}
+	
+	public void changePoke() {
+		Pokemon newAtivo, oldAtivo;
+		int change = changePoke;
+		int active = activePoke;
+		newAtivo = pokmn[change];
+		oldAtivo = pokmn[active];
+		pokmn[active] = newAtivo;
+		pokmn[change] = oldAtivo;
+	}
+	
+	public void heal(int cura) {
+		int i = cura;
+		item[i].
+		
 	}
 	
 }

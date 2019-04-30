@@ -4,9 +4,15 @@ public class Item {
 	private int recover;
 	private int quantidade;
 	
-	public Item(String nome, int rec, int quant) {
+	public void setName(String nome) {
 		name = nome;
+	}
+	
+	public void setRec(int rec) {
 		recover = rec;
+	}
+	
+	public void setQuant(int quant) {
 		quantidade = quant;
 	}
 	
