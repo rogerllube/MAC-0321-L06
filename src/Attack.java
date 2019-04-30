@@ -1,17 +1,6 @@
-public class Attack extends Event{
-	private Pokemon pa, pd;
-	private Move move;
-	private Trainer t;
-	
-	public Attack(long eventTime, Pokemon pa, Pokemon pd, Move m, Trainer treinador) {
-		super(eventTime);
-		this.pa = pa;
-		this.pd = pd;
-		move = m;
-		t = treinador;
-	}
+public abstract class Attack {
 
-	public int Dano (Move m, Pokemon a, Pokemon b) {
+	public static int Dano (Move m, Pokemon a, Pokemon b) {
 		Tabela typeEf = new Tabela();
 		double danoD, atk, def;
 		int danoI;
@@ -54,7 +43,7 @@ public class Attack extends Event{
 	}
 
 
-	public void action() {
+	public static void action() {
 		int damage;
 		int hp;
 		damage = this.Dano(move, pa, pd);
