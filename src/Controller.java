@@ -8,7 +8,7 @@ class EventSet {
 	}	
 
 	public Event getNext() {
-		Event e = events[this.next];
+		Event e = events[next];
 		next++;
 		return e;
 	}
