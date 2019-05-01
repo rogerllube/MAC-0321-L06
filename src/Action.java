@@ -3,7 +3,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Action {
 	private Trainer trainer;
 	private int type, subtype;
-	public Action(int type, Trainer trainer) {
+	public void setValues(int type, Trainer trainer) {
 		this.type = type;
 		this.trainer = trainer;
 		if(this.type == 1)
@@ -11,19 +11,19 @@ public class Action {
 		if(this.type == 3)
 			subtype = this.choosePoke();
 	}
-	private int choosePoke() {
+	public int choosePoke() {
 		return ThreadLocalRandom.current().nextInt(1, 6+1);
 	}
-	private int chooseAtk() {
+	public int chooseAtk() {
 		return ThreadLocalRandom.current().nextInt(1, 4+1);
 	}
-	private int getType() {
+	public int getType() {
 		return type;
 	}
-	private int getSubtype() {
+	public int getSubtype() {
 		return subtype;
 	}
-	private Trainer getTrainer() {
+	public Trainer getTrainer() {
 		return trainer;
 	}
 }
