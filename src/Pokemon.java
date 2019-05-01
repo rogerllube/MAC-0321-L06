@@ -78,4 +78,8 @@ public class Pokemon {
 	public void setHp(int life) {
 		this.hp = life;
 	}
+	
+	public Move getMove(int num) {
+		return move[num];
+	}
 }
