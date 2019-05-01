@@ -127,7 +127,11 @@ public class Trainer {
 	}
 
 	public void setAtivo(int ativo) {
-		while(ativo>index||ativo<1||pokmn[ativo].getHp()==0) {
+		if(pokmnLeft == 1) {
+			System.out.println("Vocẽ só possui um pokémon disponível para batalha.");
+			return;
+		}
+		while(ativo>index||ativo<1||pokmn[ativo].getHp()==0 || activePoke == ativo) {
 			System.out.println("Numero invalido, escolha outro.");
 			ativo = ThreadLocalRandom.current().nextInt(1, 6+1);
 		}
@@ -157,6 +161,7 @@ public class Trainer {
 	
 	public void heal() {
 		pokmn[activePoke].setHp(pokmn[activePoke].getHp() + 20);
+		System.out.println(pokmn[activePoke]+ " recuperou 20 de hp");
 	}
 	
 }
