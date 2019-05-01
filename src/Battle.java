@@ -2,7 +2,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Battle extends Event {
 	private Trainer p1, p2;
-	private int turn;
+	private int turn;  //sgdefghergdfgragegasdfg
 	public Battle(Trainer p1, Trainer p2) {
 
 	}
