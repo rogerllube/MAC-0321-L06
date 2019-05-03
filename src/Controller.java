@@ -25,7 +25,6 @@ public class Controller {
 		Event e;
 		while((e = es.getNext()) != null) {
 				e.action();
-				System.out.println(e.description());
 				es.removeCurrent();
 			}
 		}

@@ -11,8 +11,24 @@ public class Trainer {
 	private int changePoke;
 	private boolean acabou;
 	
-	public Trainer (String nome) {
-		name = nome;
+	public Trainer (Scanner scanner) {
+		boolean con = false;
+		String cfm;
+		name = scanner.next();
+		while(con == false) {
+			System.out.println("Seu nome e " + name +"? Digite [s] para confirmar ou qualquer outra coisa para alterar.");
+			cfm = scanner.next();
+			if (cfm.equals("s")) {
+				con = true;
+				System.out.println("Bom jogo, " + name);
+			}
+			else {
+				System.out.println("Digite seu nome de treinador");
+				name = scanner.next();
+			}
+		
+		}
+		this.name = name;
 		for(int i = 0; i < 7; i++) {
 			pokmn[i] = null;
 		}
@@ -145,6 +161,61 @@ public class Trainer {
 	public void heal(int cura) {
 		int i = cura;
 		item[i].
+		
+	}
+
+	public void selTeam(Scanner scanner) {
+		int i;
+		String done = "", nomePoke;
+		boolean succ;
+		for(i = 1;i <= 6 && !done.equals("f"); i++) {
+			System.out.println(name +": Digite o nome do seu pokemon numero " + i);
+			nomePoke = scanner.next();
+			succ = addPokemon(nomePoke);
+			while(succ == false) {
+				System.out.println("Nome invalido, digite novamente");
+				nomePoke = scanner.next();
+				succ = addPokemon(nomePoke);
+			}
+			if(i == 6) {
+				System.out.println("Pokemon adicionado com sucesso.");
+				break;
+			}
+			else
+				System.out.println("Pokemon adicionado com sucesso. Digite f para finalizar ou qualquer outra coisa para adicionar outro");
+			done = scanner.next();
+		}
+		System.out.println(name +", seus Pokemon sao:");
+		getPokeList();
+		System.out.println(name + ", digite a para alterar algum dos Pokemon ou qualquer outra tecla para confirmar");
+		String sure, newPoke;
+		int remove;
+		sure = scanner.next();
+		
+
+		while (sure.equals("a")) {
+			System.out.println(name + ", digite o numero do Pokemon que deseja alterar");
+			remove = scanner.nextInt();
+			removePoke(remove, scanner);
+			System.out.println(name +", digite n para adicionar um novo Pokemon no lugar do removido ou qualquer outra coisa para nao adicionar");
+			newPoke = scanner.next();
+			if(newPoke.equals("n")) {
+				System.out.println(name +", digite o nome do Pokemon desejado");
+				nomePoke = scanner.next();
+				succ = addPokemon(nomePoke);
+				while(succ == false) {
+					System.out.println("Nome invalido, digite novamente");
+					nomePoke = scanner.next();
+					succ = addPokemon(nomePoke);
+				}
+				System.out.println("Pokemon alterado com sucesso. Seus novos Pokemon sao:");
+				getPokeList();
+				System.out.println("Digite a para fazer mais alteracoes ou qualquer outra tecla para finalizar");
+				sure = scanner.next();
+				
+				
+			}
+		}
 		
 	}
 	
