@@ -74,6 +74,9 @@ public class Trainer {
 	public void setItem() {
 		item--;
 	}
+	public void setPoke(Pokemon p, int n) {
+		pokmn[n] = p;
+	}
 	
 	public boolean addPokemon(String poke) {
 		int i = 1;
