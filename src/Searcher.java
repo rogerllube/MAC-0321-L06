@@ -20,12 +20,12 @@ abstract class Searcher{
 		            	dexN = Integer.parseInt(scanner.nextLine());
 		                type1 = Integer.parseInt(scanner.nextLine());
 		                type2 = Integer.parseInt(scanner.nextLine());
-		                hp = Integer.parseInt(scanner.nextLine());
-		                atk = Integer.parseInt(scanner.nextLine());
-		                def = Integer.parseInt(scanner.nextLine());
-		                spatk = Integer.parseInt(scanner.nextLine());
-		                spdef = Integer.parseInt(scanner.nextLine());
-		                speed = Integer.parseInt(scanner.nextLine());
+		                hp = (Integer.parseInt(scanner.nextLine())*2)+110;
+		                atk = (Integer.parseInt(scanner.nextLine())*2)+5;
+		                def = (Integer.parseInt(scanner.nextLine())*2)+5;
+		                spatk = (Integer.parseInt(scanner.nextLine())*2)+5;
+		                spdef = (Integer.parseInt(scanner.nextLine())*2)+5;
+		                speed = (Integer.parseInt(scanner.nextLine())*2)+5;
 		                poke = new Pokemon(name, dexN, type1, type2, hp, atk, def, spatk, spdef, speed);
 		                scanner.close();
 		                return poke;
