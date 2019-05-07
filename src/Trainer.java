@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Trainer {
 	private String name;
 	private int pokmnLeft;
-	private Item[] item;
+	private int item;
 	private Pokemon[] pokmn =  new Pokemon[7];
 	private int index;
 	private int activePoke;
@@ -34,16 +34,16 @@ public class Trainer {
 		}
 		pokmnLeft = 0;
 		index = 0;
-		acabou = false;
-		for(int i = 0; i < 6; i++) {
-			item[i].setName("potion");
-			item[i].setQuant(1);
-			item[i].setRec(20);
-		}
+		acabou = false; 
+		item = 6;
 	}
 	
 	public void setOver(boolean over) {
 		acabou = over;
+	}
+	
+	public Pokemon getPoke(int active) {
+		return pokmn[active];
 	}
 	
 	public boolean getOver() {
@@ -60,6 +60,22 @@ public class Trainer {
 	
 	public int getActive() {
 		return activePoke;
+	}
+	
+	public void setLeft() {
+		pokmnLeft--;
+	}
+	public int getLeft() {
+		return pokmnLeft;
+	}
+	public int getItem() {
+		return item;
+	}
+	public void setItem() {
+		item--;
+	}
+	public void setPoke(Pokemon p, int n) {
+		pokmn[n] = p;
 	}
 	
 	public boolean addPokemon(String poke) {
@@ -130,9 +146,13 @@ public class Trainer {
 	}
 
 	public void setAtivo(int ativo) {
-		while(ativo>index||ativo<1||pokmn[ativo].getHp()==0) {
+		if(pokmnLeft == 1) {
+			System.out.println("Vocẽ só possui um pokémon disponível para batalha.");
+			return;
+		}
+		while(ativo>index||ativo<1||pokmn[ativo].getHp()==0 || activePoke == ativo) {
 			System.out.println("Numero invalido, escolha outro.");
-			ativo =;
+			ativo = ThreadLocalRandom.current().nextInt(1, 6+1);
 		}
 		System.out.println("O pokemon que entrara na batalha e: "+ pokmn[ativo].getName());
 		activePoke = ativo;
@@ -158,10 +178,9 @@ public class Trainer {
 		pokmn[change] = oldAtivo;
 	}
 	
-	public void heal(int cura) {
-		int i = cura;
-		item[i].
-		
+	public void heal() {
+		pokmn[activePoke].setHp(pokmn[activePoke].getHp() + 20);
+		System.out.println(pokmn[activePoke]+ " recuperou 20 de hp");
 	}
 
 	public void selTeam(Scanner scanner) {
