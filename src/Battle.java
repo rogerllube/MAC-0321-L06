@@ -3,6 +3,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Battle extends Controller {
 	private Trainer p1, p2;
+
 	private int turn;
 	private Action a1, a2;
 	Scanner scanner = new Scanner(System.in);
@@ -12,7 +13,6 @@ public class Battle extends Controller {
 		public void action() {
 			addEvent(new CreateTrainers());
 		}
-
 		
 		public String description() {
 		
@@ -221,26 +221,10 @@ public class Battle extends Controller {
 				System.out.println(p1.getName() + " e o vencedor. Parabens!!!."+System.lineSeparator()+"Voce venceu em "+turn+ "turnos.");
 				break;
 			}
-		
-		
+
 		}
 	}
-		
-	/*private void resolve(Action a1, Trainer p2) {
-		if(a1.getType() == 1) {
-			Resolve.attack(a1, p2);
-	}
-		if(a1.getType()==2) {
-			Resolve.useItem(a1);
-		}
-		if (a1.getType == 3) {
-			Resolve.switchPoke(a1);
-		}
-		if(a1.getType() == 4) {
-			Resolve.flee(a1);
-		}
-	}
-	*/
+
 	public String description() {
 		
 		return "Fim de jogo!";
