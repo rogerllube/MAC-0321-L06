@@ -3,7 +3,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Action {
 	private Trainer trainer;
 	private int type, subtype;
-	public Action(int type, Trainer trainer) {
+	public void setValues(int type, Trainer trainer) {
 		this.type = type;
 		this.trainer = trainer;
 		if(this.type == 1)
