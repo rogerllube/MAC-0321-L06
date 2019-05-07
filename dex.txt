@@ -9,6 +9,22 @@ Bulbasaur
 65
 65
 45
+Razor Leaf
+10
+55
+0
+Vine Whip
+10
+45
+0
+Sludge
+3
+65
+1
+Tackle
+0
+40
+0
 #2
 Ivysaur
 2

@@ -9,6 +9,7 @@ abstract class Searcher{
 			Pokemon poke;
 			String name;
 		    Scanner scanner = null;
+		    Move a, b, c, d;
 		    int dexN, type1, type2, hp, atk, def, spatk, spdef, speed; 
 		    try {
 		        scanner = new Scanner(file);
@@ -27,6 +28,11 @@ abstract class Searcher{
 		                spdef = (Integer.parseInt(scanner.nextLine())*2)+5;
 		                speed = (Integer.parseInt(scanner.nextLine())*2)+5;
 		                poke = new Pokemon(name, dexN, type1, type2, hp, atk, def, spatk, spdef, speed);
+		                a = new Move(scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()));
+		                b = new Move(scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()));
+		                c = new Move(scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()));
+		                d = new Move(scanner.nextLine(), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()), Integer.parseInt(scanner.nextLine()));
+		                poke.setMove(a, b, c, d);
 		                scanner.close();
 		                return poke;
 		            }

@@ -5,7 +5,7 @@ public class Battle extends Controller {
 	private Trainer p1, p2;
 
 	private int turn;
-	private Action a1, a2;
+	private Action a1 = new Action(), a2 = new Action();
 	Scanner scanner = new Scanner(System.in);
 	
 	private class Begin extends Event{
@@ -13,12 +13,6 @@ public class Battle extends Controller {
 		public void action() {
 			addEvent(new CreateTrainers());
 		}
-		
-		public String description() {
-		
-			return "Batalha iniciada";
-		}
-		
 	}
 	private class CreateTrainers extends Event{
 
@@ -39,16 +33,14 @@ public class Battle extends Controller {
 			Lista.listar();
 			p1.selTeam(scanner);
 			p2.selTeam(scanner);
+			addEvent(new CreateTurn());
 			
 		}
-		
 	}
 	private class CreateTurn extends Event{
 
 	
 		public void action() {
-			a1 = new Action();
-			a2 = new Action();
 			a1.setValues(ThreadLocalRandom.current().nextInt(1, 4+1), p1);
 			a2.setValues(ThreadLocalRandom.current().nextInt(1, 4+1), p2);
 			addEvent(new ResolveTurn());			
@@ -132,6 +124,7 @@ public class Battle extends Controller {
 					return;
 				}		
 			}	
+			addEvent(new CreateTurn());
 		}
 
 		private void swap(Trainer p) {
@@ -164,7 +157,7 @@ public class Battle extends Controller {
 		private void attack(Action a, Trainer p) {
 			int damage;
 			int hp;
-			
+			a.getTrainer().chooseAtk();
 			Trainer ta = a.getTrainer();
 			int activeA = ta.getActive();
 			Pokemon pokeA = ta.getPoke(activeA);
@@ -193,41 +186,10 @@ public class Battle extends Controller {
 			System.out.println(pokeA+ " atacou " +pokeD+ " com " +pokeA.getMove(a.getSubtype())+ "!"+ System.lineSeparator() +pokeD+ " tem " +hp+ " de vida restando");
 		}
 	}
-
-	public void action() {
-		Action a1, a2;
-		a1 = new Action();
-		a2 = new Action();
-		for(turn =0;!p1.getOver() && !p2.getOver(); turn++) {
-			a1.setValues(ThreadLocalRandom.current().nextInt(1, 4+1), p1);
-			a2.setValues(ThreadLocalRandom.current().nextInt(1, 4+1), p2);
-			if (a1.getType()>=a2.getType())
-				ResolveTurn(a1, p2);
-			if(p2.getOver()) {
-				System.out.println(p1.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ "turnos.");
-				break;
-			}
-			else if(p1.getOver()) {
-				System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ "turnos.");
-				break;
-			}
-			else if(a2.getType()>a1.getType())
-				resolve(a2, p1);
-			if(p1.getOver()) {
-				System.out.println(p2.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ "turnos.");
-				break;
-			}
-			else if(p2.getOver()) {
-				System.out.println(p1.getName() + " e o vencedor. Parabens!!!."+System.lineSeparator()+"Voce venceu em "+turn+ "turnos.");
-				break;
-			}
-
-		}
-	}
-
-	public String description() {
-		
-		return "Fim de jogo!";
+	public static void main(String[] args) {
+		Battle battle = new Battle();
+		battle.addEvent(battle.new Begin());
+		battle.run();
 	}
 }
 	
