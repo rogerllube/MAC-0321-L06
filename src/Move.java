@@ -1,17 +1,15 @@
 
 public class Move {
 	private String name;
-	private int number;
 	private int type;
 	private int damage;
 	private int physical;
 	
-	public Move (String nome, int tipo, int damage, int physical, int numero) {
+	public Move (String nome, int tipo, int damage, int physical) {
 		type = tipo;
 		this.damage = damage;
 		this.physical = physical;
 		name = nome;
-		number = numero;
 	}
 	
 	public String getName() {
@@ -22,16 +20,11 @@ public class Move {
 		return type;
 	}
 	
-	public int getDamege() {
+	public int getDamage() {
 		return damage;
 	}
 	
 	public int getPhysical() {
 		return physical;
 	}
-	
-	public int getNumber() {
-		return number;
-	}
-	
 }

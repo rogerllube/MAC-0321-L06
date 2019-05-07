@@ -28,7 +28,6 @@ public class Trainer {
 			}
 		
 		}
-		this.name = name;
 		for(int i = 0; i < 7; i++) {
 			pokmn[i] = null;
 		}
@@ -78,7 +77,7 @@ public class Trainer {
 		pokmn[n] = p;
 	}
 	
-	public boolean addPokemon(String poke) {
+	public boolean addPokemon(int poke) {
 		int i = 1;
 		while(pokmn[i] != null) {
 			i++;
@@ -184,17 +183,17 @@ public class Trainer {
 	}
 
 	public void selTeam(Scanner scanner) {
-		int i;
-		String done = "", nomePoke;
+		int i, numPoke;
+		String done = "";
 		boolean succ;
 		for(i = 1;i <= 6 && !done.equals("f"); i++) {
-			System.out.println(name +": Digite o nome do seu pokemon numero " + i);
-			nomePoke = scanner.next();
-			succ = addPokemon(nomePoke);
+			System.out.println(name +": Digite o numero do seu pokemon " + i);
+			numPoke = scanner.nextInt();
+			succ = addPokemon(numPoke);
 			while(succ == false) {
-				System.out.println("Nome invalido, digite novamente");
-				nomePoke = scanner.next();
-				succ = addPokemon(nomePoke);
+				System.out.println("Numero invalido, digite novamente");
+				numPoke = scanner.nextInt();
+				succ = addPokemon(numPoke);
 			}
 			if(i == 6) {
 				System.out.println("Pokemon adicionado com sucesso.");
@@ -219,13 +218,13 @@ public class Trainer {
 			System.out.println(name +", digite n para adicionar um novo Pokemon no lugar do removido ou qualquer outra coisa para nao adicionar");
 			newPoke = scanner.next();
 			if(newPoke.equals("n")) {
-				System.out.println(name +", digite o nome do Pokemon desejado");
-				nomePoke = scanner.next();
-				succ = addPokemon(nomePoke);
+				System.out.println(name +", digite o numero do Pokemon desejado");
+				numPoke = scanner.nextInt();
+				succ = addPokemon(numPoke);
 				while(succ == false) {
-					System.out.println("Nome invalido, digite novamente");
-					nomePoke = scanner.next();
-					succ = addPokemon(nomePoke);
+					System.out.println("Numero invalido, digite novamente");
+					numPoke = scanner.nextInt();
+					succ = addPokemon(numPoke);
 				}
 				System.out.println("Pokemon alterado com sucesso. Seus novos Pokemon sao:");
 				getPokeList();

@@ -9,12 +9,12 @@ class EventSet {
 
 	public Event getNext() {
 		Event e = events[next];
-		next++;
 		return e;
 	}
 
 	public void removeCurrent() {
 		events[next] = null;
+		next++;
 	}
 }
 
