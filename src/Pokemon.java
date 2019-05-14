@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 public class Pokemon {
 	
 	private String name;
 	private int type1, type2;
-	private Move[] move = new Move[4];
+	private Move[] move = new Move[5];
 	private int dexNumber;
 	private int hp,hpMAX;
 	private int attack;
@@ -25,10 +27,10 @@ public class Pokemon {
 	}
 	
 	public void setMove(Move a, Move b, Move c, Move d) {
-		move[0] = a;
-		move[1] = b;
-		move[2] = c;
-		move[3] = d;
+		move[1] = a;
+		move[2] = b;
+		move[3] = c;
+		move[4] = d;
 	}
 	
 	public String getName() {
@@ -81,5 +83,19 @@ public class Pokemon {
 	
 	public Move getMove(int num) {
 		return move[num];
+	}
+	public Move chooseAtk(Scanner scanner, Trainer t) {
+		int esc;
+		getMoveList();
+		System.out.println(t.getName() +" escolha seu ataque");
+		esc = scanner.nextInt();
+		while(esc < 1 || esc > 4) {
+			System.out.println("Numero invalido, selecione outro");
+		}
+		return move[esc];
+	}
+
+	private void getMoveList() {
+		System.out.println("Digite [1] para utilizar: " + move[1].getName() + System.lineSeparator() + "Digite [2] para utilizar: " + move[2].getName() + System.lineSeparator() + "Digite [3] para utilizar: " + move[3].getName() + System.lineSeparator() + "Digite [4] para utilizar: " + move[4].getName() + System.lineSeparator());
 	}
 }
