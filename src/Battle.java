@@ -60,6 +60,7 @@ public class Battle extends Controller {
 		
 		public void action() {
 			int type1, type2;
+			boolean dead;
 			type1 = a1.getType();
 			type2 = a2.getType();
 			int tie;
@@ -75,32 +76,34 @@ public class Battle extends Controller {
 					item(p1);
 				if(type1 == 1) 
 					if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
-						attack(a1, p2);
+						dead = attack(a1, p2);
 						if(p2.getOver()) {
 							System.out.println(p1.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 							return;
 						}
-						attack(a2, p1);
+						if(!dead)
+							attack(a2, p1);
 					}
-					else if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
-						attack(a2, p1);
+					else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
+						dead = attack(a2, p1);
 						if(p1.getOver()) {
 							System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 							return;
 						}
-						attack(a1, p2);
+						if (!dead)
+							attack(a1, p2);
 					}
 					else {
 						tie = ThreadLocalRandom.current().nextInt(0, 2);
 						if (tie == 0) {
-							attack(a1, p2);
-							if(!p2.getOver()) {
+							dead = attack(a1, p2);
+							if(!p2.getOver() && !dead) {
 								attack(a2, p1);
 							}
 						}
 						else {
-							attack(a2, p1);
-							if(!p1.getOver())
+							dead = attack(a2, p1);
+							if(!p1.getOver() && !dead)
 								attack(a1, p2);
 						}
 						if(p1.getOver()) {
@@ -171,7 +174,7 @@ public class Battle extends Controller {
 			Pokemon a, b;
 			int troca;
 			p.getPokeList();
-			System.out.println("Digite o número do pokémon que deseja usar");
+			System.out.println(p.getName() + " digite o número do pokémon que deseja usar");
 			troca = scanner.nextInt();
 			a = p.getPoke(p.getActive());
 			b = p.getPoke(troca);
@@ -194,8 +197,9 @@ public class Battle extends Controller {
 			}
 		}
 		
-		private void attack(Action a, Trainer p) {
+		private boolean attack(Action a, Trainer p) {
 			int damage;
+			boolean morreu = false;
 			int hp;
 			Trainer ta = a.getTrainer();
 			Pokemon pokeA = ta.getActivePoke();
@@ -214,6 +218,8 @@ public class Battle extends Controller {
 					System.out.println("Escolha outro pokémon");
 					td.getPokeList();
 					td.setAtivo(scanner.nextInt());
+					morreu = true;
+					
 				}
 				else {
 					td.setOver(true);
@@ -224,6 +230,7 @@ public class Battle extends Controller {
 				System.out.println(pokeA.getName()+ " atacou " +pokeD.getName() + " com " +atk.getName()+ "!"+ System.lineSeparator() +pokeD.getName()+ " tem " +pokeD.getHp()+ " de vida restando");
 				System.out.println("");
 			}
+			return morreu;
 		}
 	}
 	private class ChooseLead extends Event{
@@ -231,14 +238,23 @@ public class Battle extends Controller {
 		
 		public void action() {
 			int starter;
+			Pokemon a, b;
 			System.out.println(p1.getName() + " escolha o seu pokemon inicial");
 			p1.getPokeList();
 			starter = scanner.nextInt();
-			p1.setStarter(starter, scanner);
+			starter = p1.setStarter(starter, scanner);
+			a = p1.getPoke(p1.getActive());
+			b = p1.getPoke(starter);
+			p1.setPoke(b, p1.getActive());
+			p1.setPoke(a, starter);
 			System.out.println(p2.getName() + " escolha o seu pokemon inicial");
 			p2.getPokeList();
 			starter = scanner.nextInt();
-			p2.setStarter(starter, scanner);
+			starter = p2.setStarter(starter, scanner);
+			a = p2.getPoke(p2.getActive());
+			b = p2.getPoke(starter);
+			p2.setPoke(b, p2.getActive());
+			p2.setPoke(a, starter);
 			addEvent(new CreateTurn());
 			
 		}

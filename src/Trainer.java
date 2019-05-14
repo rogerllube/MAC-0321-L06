@@ -165,16 +165,6 @@ public class Trainer {
 		
 		}
 	
-	public void changePoke() {
-		Pokemon newAtivo, oldAtivo;
-		int change = changePoke;
-		int active = activePoke;
-		newAtivo = pokmn[change];
-		oldAtivo = pokmn[active];
-		pokmn[active] = newAtivo;
-		pokmn[change] = oldAtivo;
-	}
-	
 	public void heal(Scanner scanner) {
 		getPokeList();
 		System.out.println(name + " escolha o Pokemon que deseja curar");
@@ -195,7 +185,7 @@ public class Trainer {
 			pokmn[i].setHp(pokmn[i].getHp() + 20);
 		else
 			pokmn[i].setHp(pokmn[i].getHpMAX());
-		System.out.println(pokmn[i].getName()+ " recuperou 20 de hp" + System.lineSeparator() + "Agora " + pokmn[i].getName() + " tem " + pokmn[i].getHp() + "/" + pokmn[i].getHpMAX() + "de hp");
+		System.out.println(pokmn[i].getName()+ " recuperou 20 de hp" + System.lineSeparator() + "Agora " + pokmn[i].getName() + " tem " + pokmn[i].getHp() + "/" + pokmn[i].getHpMAX() + " de hp");
 	}
 
 	public void selTeam(Scanner scanner) {
@@ -253,7 +243,7 @@ public class Trainer {
 		}
 		
 	}
-	public void setStarter(int starter, Scanner scanner) {
+	public int setStarter(int starter, Scanner scanner) {
 		while(starter>index || starter<1) {
 			System.out.println("Numero invalido, digite outro");
 			starter = scanner.nextInt();
@@ -261,6 +251,7 @@ public class Trainer {
 		activePoke = starter;
 		System .out.println("Seu Pokemon inicial e " + pokmn[starter].getName());
 		System.out.println("");
+		return starter;
 	}
 	public Pokemon getActivePoke() {
 		return pokmn[activePoke];
