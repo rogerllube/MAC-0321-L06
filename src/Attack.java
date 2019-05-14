@@ -41,34 +41,4 @@ public abstract class Attack {
 			}
 		}
 	}
-
-
-	public static void action() {
-		int damage;
-		int hp;
-		damage = this.Dano(move, pa, pd);
-		hp = pd.getHp();
-		if(hp - damage <= 0) {
-			pd.setHp(0);
-			System.out.println(pa+ " atacou " +pd+ " com " +move+ "!"+ System.lineSeparator() +pd+ " não tem mais hp");
-			System.out.println("Escolha outro pokémon");
-			t.getPokeList();
-			t.setAtivo(1);
-		}
-		pd.setHp(hp - damage);
-	}
-
-
-	public String description() {
-		String message;
-		int hp = pd.getHp();
-		if(pd.getHp() == 0) {
-			return null;
-		}
-		else{
-			message = pa+ " atacou " +pd+ " com " +move+ "!"+ System.lineSeparator() +pd+ " tem " +hp+ " de vida restando"; 
-		}
-		return message;
-	}
-
 }
