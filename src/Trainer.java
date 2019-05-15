@@ -21,6 +21,7 @@ public class Trainer {
 			if (cfm.equals("s")) {
 				con = true;
 				System.out.println("Bom jogo, " + name);
+				System.out.println("");
 			}
 			else {
 				System.out.println("Digite seu nome de treinador");
@@ -95,13 +96,10 @@ public class Trainer {
 	
 	public void getPokeList() {
 		int i = 1;
-		String fainted;
+		
 		while(i < 7 && pokmn[i] != null) {
 			String name = pokmn[i].getName();
-			if(pokmn[i].getHp()== 0)
-				fainted = "fainted";
-			else fainted = "";
-			System.out.println(""+i+ " - " +name+" "+fainted);
+			System.out.println("["+i+ "] - " +name+" "+pokmn[i].getHp() + "/" +pokmn[i].getHpMAX());
 			i++;
 		}
 	}
@@ -110,7 +108,7 @@ public class Trainer {
 		boolean conf = true;
 		String cfm;
 		while((pokmn[n] == null && conf) || n>6) {
-			System.out.println("Número inválido, deseja remover pokémon? Digite s para confirmar ou qualquer outra coisa para alterar.");
+			System.out.println("Número inválido, deseja remover pokémon? Digite [s] para confirmar ou qualquer outra coisa para alterar.");
 			cfm = scan.next();
 			if(cfm.equals("s")) {
 				System.out.println("Digite o número do pokémon a ser removido");
@@ -123,10 +121,10 @@ public class Trainer {
 		if(pokmn[n] != null && conf) {
 			String nome = pokmn[n].getName();
 			System.out.println("Pokémon a ser removido: " +nome);
-			System.out.println("Tem certeza que quer remover " +nome+ "? Digite s para confirmar ou qualquer outra coisa para alterar.");
+			System.out.println("Tem certeza que quer remover " +nome+ "? Digite [s ]para confirmar ou qualquer outra coisa para alterar.");
 			cfm = scan.next();
 			while(!cfm.equals("s")) {
-				System.out.println("Se não quiser mais alterar pokémon, digite s");
+				System.out.println("Se não quiser mais alterar pokémon, digite [s]");
 				cfm = scan.next();
 				if(cfm.equals("s")) {
 					scan.close();
@@ -136,7 +134,7 @@ public class Trainer {
 				n = scan.nextInt();
 				nome = pokmn[n].getName();
 				System.out.println("Pokémon a ser removido: " +nome);
-				System.out.println("Tem certeza que quer remover " +nome+ "? Digite s para confirmar ou qualquer outra coisa para alterar.");
+				System.out.println("Tem certeza que quer remover " +nome+ "? Digite [s] para confirmar ou qualquer outra coisa para alterar.");
 				cfm = scan.next();
 			}
 			System.out.println("Pokémon " +nome+ " removido com sucesso");
@@ -167,19 +165,27 @@ public class Trainer {
 		
 		}
 	
-	public void changePoke() {
-		Pokemon newAtivo, oldAtivo;
-		int change = changePoke;
-		int active = activePoke;
-		newAtivo = pokmn[change];
-		oldAtivo = pokmn[active];
-		pokmn[active] = newAtivo;
-		pokmn[change] = oldAtivo;
-	}
-	
-	public void heal() {
-		pokmn[activePoke].setHp(pokmn[activePoke].getHp() + 20);
-		System.out.println(pokmn[activePoke]+ " recuperou 20 de hp");
+	public void heal(Scanner scanner) {
+		getPokeList();
+		System.out.println(name + " escolha o Pokemon que deseja curar");
+		int i = scanner.nextInt();
+		while(true) {
+		while(i<1 || i> index) {
+			System.out.println("Numero invalido, escolha outro");
+			i=scanner.nextInt();
+		}
+			if(pokmn[i].getHp() == 0) {
+				System.out.println("Este Pokemon esta desmaiado, escolha outro para curar");
+				i=scanner.nextInt();
+			}
+			else
+				break;
+		}
+		if(pokmn[i].getHp()+20 <= pokmn[i].getHpMAX())
+			pokmn[i].setHp(pokmn[i].getHp() + 20);
+		else
+			pokmn[i].setHp(pokmn[i].getHpMAX());
+		System.out.println(pokmn[i].getName()+ " recuperou 20 de hp" + System.lineSeparator() + "Agora " + pokmn[i].getName() + " tem " + pokmn[i].getHp() + "/" + pokmn[i].getHpMAX() + " de hp");
 	}
 
 	public void selTeam(Scanner scanner) {
@@ -200,12 +206,13 @@ public class Trainer {
 				break;
 			}
 			else
-				System.out.println("Pokemon adicionado com sucesso. Digite f para finalizar ou qualquer outra coisa para adicionar outro");
+				System.out.println("Pokemon adicionado com sucesso. Digite [f] para finalizar ou qualquer outra coisa para adicionar outro");
 			done = scanner.next();
 		}
 		System.out.println(name +", seus Pokemon sao:");
 		getPokeList();
-		System.out.println(name + ", digite a para alterar algum dos Pokemon ou qualquer outra tecla para confirmar");
+		System.out.println("");
+		System.out.println(name + ", digite [a] para alterar algum dos Pokemon ou qualquer outra tecla para confirmar");
 		String sure, newPoke;
 		int remove;
 		sure = scanner.next();
@@ -215,7 +222,7 @@ public class Trainer {
 			System.out.println(name + ", digite o numero do Pokemon que deseja alterar");
 			remove = scanner.nextInt();
 			removePoke(remove, scanner);
-			System.out.println(name +", digite n para adicionar um novo Pokemon no lugar do removido ou qualquer outra coisa para nao adicionar");
+			System.out.println(name +", digite [n] para adicionar um novo Pokemon no lugar do removido ou qualquer outra coisa para nao adicionar");
 			newPoke = scanner.next();
 			if(newPoke.equals("n")) {
 				System.out.println(name +", digite o numero do Pokemon desejado");
@@ -228,7 +235,7 @@ public class Trainer {
 				}
 				System.out.println("Pokemon alterado com sucesso. Seus novos Pokemon sao:");
 				getPokeList();
-				System.out.println("Digite a para fazer mais alteracoes ou qualquer outra tecla para finalizar");
+				System.out.println("Digite [a] para fazer mais alteracoes ou qualquer outra tecla para finalizar");
 				sure = scanner.next();
 				
 				
@@ -236,5 +243,20 @@ public class Trainer {
 		}
 		
 	}
+	public int setStarter(int starter, Scanner scanner) {
+		while(starter>index || starter<1) {
+			System.out.println("Numero invalido, digite outro");
+			starter = scanner.nextInt();
+		}
+		activePoke = starter;
+		System .out.println("Seu Pokemon inicial e " + pokmn[starter].getName());
+		System.out.println("");
+		return starter;
+	}
+	public Pokemon getActivePoke() {
+		return pokmn[activePoke];
+	}
+		
+	
 	
 }

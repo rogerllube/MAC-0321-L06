@@ -5,7 +5,7 @@ public abstract class Attack {
 		double danoD, atk, def;
 		int danoI;
 		int phys = m.getPhysical();
-		int dam = m.getDamege();
+		int dam = m.getDamage();
 		int typ = m.getType();
 		
 		if(b.getType2() == -1) {
