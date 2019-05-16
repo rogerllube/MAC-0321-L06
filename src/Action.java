@@ -2,7 +2,7 @@
 
 public class Action {
 	private Trainer trainer;
-	private int type, subtype;
+	private int type;
 	private Move move;
 	public void setValues(int type, Trainer trainer) {
 		this.type = type;
@@ -15,12 +15,6 @@ public class Action {
 	}
 	public Trainer getTrainer() {
 		return trainer;
-	}
-	public void setSubtype(int st) {
-		subtype = st;
-	}
-	public int getSubtype() {
-		return subtype;
 	}
 	public Move getMove() {
 		return move;

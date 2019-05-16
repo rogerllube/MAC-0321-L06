@@ -48,10 +48,14 @@ public class Battle extends Controller {
 			System.out.println("[1]Ataque         [2]Usar Item" + System.lineSeparator() + "[3]Trocar Pokemon     [4]Fugir");
 			a1.setValues(scanner.nextInt(), p1);
 			System.out.println("");
+			if(a1.getType() == 1)
+				a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
 			System.out.println(p2.getName() +" escolha sua acao");
 			System.out.println("[1]Ataque         [2]Usar Item" + System.lineSeparator() + "[3]Trocar Pokemon     [4]Fugir");
 			a2.setValues(scanner.nextInt(), p2);
 			System.out.println("");
+			if(a1.getType() == 1)
+				a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
 			p1.setPatt(true);
 			p2.setPatt(true);
 			addEvent(new ResolveTurn());			
@@ -77,36 +81,28 @@ public class Battle extends Controller {
 				if(type1 == 1) {
 					if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
 						addEvent(new Attack(a1, p2));
-						a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
 						addEvent(new CheckEnd(p1, p2));
 						addEvent(new Attack(a2, p1));
-						a2.setMove(p2.getActivePoke().chooseAtk(scanner, p2));
 						addEvent(new CheckEnd(p2,p1));
 					}
 					else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
 						addEvent(new Attack(a2, p1));
-						a2.setMove(p2.getActivePoke().chooseAtk(scanner, p2));
 						addEvent(new CheckEnd(p2, p1));
 						addEvent(new Attack(a1, p2));
-						a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
 						addEvent(new CheckEnd(p1,p2));
 					}
 					else {
 						tie = ThreadLocalRandom.current().nextInt(0, 2);
 						if (tie == 0) {
 							addEvent(new Attack(a1, p2));
-							a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
 							addEvent(new CheckEnd(p1,p2));
 							addEvent(new Attack(a2, p1));
-							a2.setMove(p2.getActivePoke().chooseAtk(scanner, p2));
 							addEvent(new CheckEnd(p2,p1));
 							}
 						else {
 							addEvent(new Attack(a2, p1));
-							a2.setMove(p2.getActivePoke().chooseAtk(scanner, p2));
 							addEvent(new CheckEnd(p2,p1));
 							addEvent(new Attack(a1, p2));
-							a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
 							addEvent (new CheckEnd(p1,p2));
 						}
 					}
@@ -121,7 +117,6 @@ public class Battle extends Controller {
 					addEvent(new Item(p2));	
 				if (type2 == 1 && type1 != 1) {
 					addEvent(new Attack(a2, p1));
-					a2.setMove(p2.getActivePoke().chooseAtk(scanner, p2));
 					addEvent(new CheckEnd(p2,p1));
 				}
 			}
@@ -144,7 +139,6 @@ public class Battle extends Controller {
 					addEvent(new Item(p1));
 				if(type1 == 1) {
 					addEvent(new Attack(a1, p2));
-					a1.setMove(p1.getActivePoke().chooseAtk(scanner,p1));
 					addEvent(new CheckEnd(p1,p2));
 				}
 			}
