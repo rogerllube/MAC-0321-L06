@@ -3,6 +3,7 @@
 public class Action {
 	private Trainer trainer;
 	private int type, subtype;
+	private Move move;
 	public void setValues(int type, Trainer trainer) {
 		this.type = type;
 		this.trainer = trainer;
@@ -20,5 +21,11 @@ public class Action {
 	}
 	public int getSubtype() {
 		return subtype;
+	}
+	public Move getMove() {
+		return move;
+	}
+	public void setMove(Move move) {
+		this.move = move;
 	}
 }

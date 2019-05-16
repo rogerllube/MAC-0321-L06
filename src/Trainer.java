@@ -11,6 +11,7 @@ public class Trainer {
 	private int changePoke;
 	private int pokeball, maxBall;
 	private boolean acabou;
+	private boolean patt;
 	
 	public Trainer (Scanner scanner) {
 		boolean con = false;
@@ -184,7 +185,7 @@ public class Trainer {
 				cfm = scan.next();
 			}
 			System.out.println("Pokémon " +nome+ " removido com sucesso");
-			while(pokmn[n + 1] != null) {
+			while(n<6 && pokmn[n + 1] != null) {
 				pokmn[n] = pokmn[n + 1];
 				n++;
 			}
@@ -392,7 +393,7 @@ public class Trainer {
 		System.out.println("Sua party já está cheia");
 		System.out.println("Deseja remover um de seus Pokemon e adicionar o capturado?");
 		System.out.println("Digite [s] se quiser fazer isso");
-		troca = scanner.nextLine();
+		troca = scanner.next();
 		if(troca.equals("s")) {
 			getPokeList();
 			System.out.println("");
@@ -402,5 +403,11 @@ public class Trainer {
 			addPokeWild(wild.getPoke(1));
 			System.out.println(wild.getName() + " foi adicionado a sua party");
 		}
+	}
+	public void setPatt(boolean value) {
+		patt = value;
+	}
+	public boolean getPatt() {
+		return patt;
 	}
 }
