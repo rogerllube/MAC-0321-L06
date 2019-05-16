@@ -79,31 +79,45 @@ public class Battle extends Controller {
 				if (type1 == 2)
 					addEvent(new Item(p1));
 				if(type1 == 1) {
-					if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
+					if(a1.getMove().getPriority()>a2.getMove().getPriority()) {
 						addEvent(new Attack(a1, p2));
 						addEvent(new CheckEnd(p1, p2));
 						addEvent(new Attack(a2, p1));
 						addEvent(new CheckEnd(p2,p1));
 					}
-					else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
+					if(a2.getMove().getPriority()>a1.getMove().getPriority()) {
 						addEvent(new Attack(a2, p1));
 						addEvent(new CheckEnd(p2, p1));
 						addEvent(new Attack(a1, p2));
 						addEvent(new CheckEnd(p1,p2));
 					}
-					else {
-						tie = ThreadLocalRandom.current().nextInt(0, 2);
-						if (tie == 0) {
+					if(a1.getMove().getPriority() == a2.getMove().getPriority()) {
+						if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
+							addEvent(new Attack(a1, p2));
+							addEvent(new CheckEnd(p1, p2));
+							addEvent(new Attack(a2, p1));
+							addEvent(new CheckEnd(p2,p1));
+						}
+						else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
+							addEvent(new Attack(a2, p1));
+							addEvent(new CheckEnd(p2, p1));
 							addEvent(new Attack(a1, p2));
 							addEvent(new CheckEnd(p1,p2));
-							addEvent(new Attack(a2, p1));
-							addEvent(new CheckEnd(p2,p1));
-							}
+						}
 						else {
-							addEvent(new Attack(a2, p1));
-							addEvent(new CheckEnd(p2,p1));
-							addEvent(new Attack(a1, p2));
-							addEvent (new CheckEnd(p1,p2));
+							tie = ThreadLocalRandom.current().nextInt(0, 2);
+							if (tie == 0) {
+								addEvent(new Attack(a1, p2));
+								addEvent(new CheckEnd(p1,p2));
+								addEvent(new Attack(a2, p1));
+								addEvent(new CheckEnd(p2,p1));
+								}
+							else {
+								addEvent(new Attack(a2, p1));
+								addEvent(new CheckEnd(p2,p1));
+								addEvent(new Attack(a1, p2));
+								addEvent (new CheckEnd(p1,p2));
+							}
 						}
 					}
 				}
