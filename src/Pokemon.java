@@ -98,4 +98,5 @@ public class Pokemon {
 	private void getMoveList() {
 		System.out.println("Digite [1] para utilizar: " + move[1].getName() + System.lineSeparator() + "Digite [2] para utilizar: " + move[2].getName() + System.lineSeparator() + "Digite [3] para utilizar: " + move[3].getName() + System.lineSeparator() + "Digite [4] para utilizar: " + move[4].getName() + System.lineSeparator());
 	}
+
 }

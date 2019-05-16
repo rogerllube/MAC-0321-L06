@@ -1,5 +1,5 @@
 class EventSet {
-	private Event[] events = new Event[100];
+	private Event[] events = new Event[1000];
 	private int index = 0;	
 	private int next = 0;
 	
