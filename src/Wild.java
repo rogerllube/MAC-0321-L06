@@ -7,9 +7,13 @@ public class Wild extends Controller{
 	private int i, j;
 	private Action a1 = new Action(), a2 = new Action();
 	private Mapa map = new Mapa();
-	Scanner scanner = new Scanner(System.in);
+	Scanner scanner;
 	
-	private class Begin extends Event{
+	public Wild(Scanner scanner) {
+		this.scanner = scanner;
+	}
+	
+	public class Begin extends Event{
 		public void action() {
 			addEvent(new CreateTrainer());
 		}
@@ -418,14 +422,7 @@ public class Wild extends Controller{
 			}
 		}
 		return morreu;
-	}
-	
-	public static void main(String[] args) {
-		Wild adventure = new Wild();
-		adventure.addEvent(adventure.new Begin());
-		adventure.run();
-	}
-		
+	}	
 }
 	
 

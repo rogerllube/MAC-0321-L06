@@ -7,8 +7,11 @@ public class Battle extends Controller {
 	private int turn = 1;
 	private Action a1 = new Action(), a2 = new Action();
 	Scanner scanner = new Scanner(System.in);
+	public Battle(Scanner scanner) {
+		this.scanner = scanner;
+	}
 	
-	private class Begin extends Event{
+	public class Begin extends Event{
 
 		public void action() {
 			addEvent(new CreateTrainers());
@@ -297,11 +300,6 @@ public class Battle extends Controller {
 				addEvent(new CreateTurn());
 			}
 		}
-	}
-	public static void main(String[] args) {
-		Battle battle = new Battle();
-		battle.addEvent(battle.new Begin());
-		battle.run();
 	}
 }
 
