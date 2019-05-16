@@ -13,17 +13,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #2
 Ivysaur
@@ -40,17 +44,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #3
 Venusaur
@@ -67,17 +75,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #4
 Charmander
@@ -94,18 +106,22 @@ Ember
 8
 40
 1
+0
 Scratch
 0
 40
+0
 0
 Slash
 0
 70
 0
+0
 Flamethrower
 8
 95
 1
+0
 #5
 Charmeleon
 5
@@ -121,18 +137,22 @@ Ember
 8
 40
 1
+0
 Mega Punch
 0
 80
+0
 0
 Slash
 0
 70
 0
+0
 Flamethrower
 8
 95
 1
+0
 #6
 Charizard
 6
@@ -148,18 +168,22 @@ Ember
 8
 40
 1
+0
 Earthquake
 4
 100
+0
 0
 Slash
 0
 70
 0
+0
 Flamethrower
 8
 95
 1
+0
 #7
 Squirtle
 7
@@ -175,18 +199,22 @@ Tackle
 0
 35
 0
+0
 Water Gun
 9
 40
 1
+0
 Bite
 0
 60
+0
 0
 Surf
 9
 95
 1
+0
 #8
 Wartortle
 8
@@ -202,18 +230,22 @@ Tackle
 0
 35
 0
+0
 Water Gun
 9
 40
 1
+0
 Bite
 0
 60
+0
 0
 Surf
 9
 95
 1
+0
 #9
 Blastoise
 9
@@ -229,18 +261,22 @@ Ice Beam
 13
 95
 1
+0
 Water Gun
 9
 40
 1
+0
 Bite
 0
 60
+0
 0
 Surf
 9
 95
 1
+0
 #10
 Caterpie
 10
@@ -256,17 +292,21 @@ Tackle
 0
 35
 0
-Tackle
-0
-35
 0
 Tackle
 0
 35
 0
+0
 Tackle
 0
 35
+0
+0
+Tackle
+0
+35
+0
 0
 #11
 Metapod
@@ -283,14 +323,19 @@ Harden
 0
 0
 0
+0
+Harden
+0
+0
+0
+0
 Harden
 0
 0
-0Harden
-0
 0
 0
 Harden
+0
 0
 0
 0
@@ -309,18 +354,22 @@ Confusion
 12
 50
 1
+0
 Psybeam
 12
 65
 1
+0
 Gust
 0
 40
 1
+0
 Swift
 0
 60
 1
+0
 #13
 Weedle
 13
@@ -336,17 +385,21 @@ Poison sting
 3
 15
 0
-Poison sting
-3
-15
 0
 Poison sting
 3
 15
 0
+0
 Poison sting
 3
 15
+0
+0
+Poison sting
+3
+15
+0
 0
 #14
 Kakuna
@@ -363,14 +416,19 @@ Harden
 0
 0
 0
+0
+Harden
+0
+0
+0
+0
 Harden
 0
 0
-0Harden
-0
 0
 0
 Harden
+0
 0
 0
 0
@@ -389,18 +447,22 @@ X-Scissor
 6
 80
 0
+0
 Poison Jab
 3
 80
+0
 0
 Cut
 0
 50
 0
+0
 Swift
 0
 60
 1
+0
 #16
 Pidgey
 16
@@ -416,18 +478,22 @@ Wing Attack
 2
 35
 0
+0
 Gust
 0
 40
 1
+0
 Swift
 0
 60
 1
-Tackle
 0
-35
+Quick Attack
 0
+40
+0
+1
 #17
 Pidgeotto
 17
@@ -444,18 +510,22 @@ Wing Attack
 2
 35
 0
+0
 Gust
 0
 40
 1
+0
 Swift
 0
 60
 1
-Tackle
 0
-35
+Quick Attack
 0
+40
+0
+1
 #18
 Pidgeot
 18
@@ -471,18 +541,22 @@ Wing Attack
 2
 35
 0
+0
 Gust
 0
 40
 1
+0
 Swift
 0
 60
 1
-Tackle
 0
-35
+Quick Attack
 0
+40
+0
+1
 #19
 Rattatta
 19
@@ -507,9 +581,10 @@ Body Slam
 0
 85
 0
-Water Gun
-9
+Quick Attack
+0
 40
+0
 1
 #20
 Raticate
@@ -534,9 +609,10 @@ Body Slam
 0
 85
 0
-Water Gun
-9
+Quick Attack
+0
 40
+0
 1
 #21
 Spearow
@@ -549,21 +625,25 @@ Spearow
 31
 31
 70
-Peck
-2
-35
+Quick Attack
 0
+40
+0
+1
 Drill Peck
 2
 80
+0
 0
 Swift
 0
 60
 1
+0
 Aerial Ace
 2
 60
+0
 0
 #22
 Fearow
@@ -576,21 +656,25 @@ Fearow
 61
 61
 100
-Peck
-2
-35
+Quick Attack
 0
+40
+0
+1
 Drill Peck
 2
 80
+0
 0
 Swift
 0
 60
 1
+0
 Aerial Ace
 2
 60
+0
 0
 #23
 Ekans
@@ -603,6 +687,26 @@ Ekans
 40
 54
 55
+Acid
+3
+40
+1
+0
+Bite
+0
+60
+0
+0
+Poison Sting
+3
+15
+0
+0
+Body Slam
+0
+85
+0
+0
 #24
 Arbok
 24
@@ -614,6 +718,26 @@ Arbok
 65
 79
 80
+Acid
+3
+40
+1
+0
+Bite
+0
+60
+0
+0
+Poison Sting
+3
+15
+0
+0
+Body Slam
+0
+85
+0
+0
 #25
 Pikachu
 25
@@ -625,6 +749,26 @@ Pikachu
 50
 50
 90
+Thunderbolt
+11
+90
+1
+0
+Quick Attack
+0
+40
+0
+1
+ThunderShock
+11
+40
+1
+0
+Slam
+0
+80
+0
+0
 #26
 Raichu
 26
@@ -636,6 +780,26 @@ Raichu
 90
 80
 110
+Thunderbolt
+11
+90
+1
+0
+Quick Attack
+0
+40
+0
+1
+ThunderShock
+11
+40
+1
+0
+Slam
+0
+80
+0
+0
 #27
 Sandshrew
 27
@@ -647,6 +811,26 @@ Sandshrew
 20
 30
 40
+Scratch
+0
+40
+0
+0
+Earthquake
+4
+100
+0
+0
+Poison Sting
+3
+15
+0
+0
+Slash
+0
+70
+0
+0
 #28
 Sandslash
 28
@@ -658,6 +842,26 @@ Sandslash
 45
 55
 65
+Scratch
+0
+40
+0
+0
+Earthquake
+4
+100
+0
+0
+Poison Sting
+3
+15
+0
+0
+Slash
+0
+70
+0
+0
 #29
 NidoranF
 29
@@ -669,6 +873,26 @@ NidoranF
 40
 40
 41
+Poison Sting
+3
+15
+0
+0
+Tackle
+0
+35
+0
+0
+Bite
+0
+60
+0
+0
+Scratch
+0
+40
+0
+0
 #30
 Nidorina
 30
@@ -680,6 +904,26 @@ Nidorina
 55
 55
 56
+Poison Sting
+3
+15
+0
+0
+Tackle
+0
+35
+0
+0
+Bite
+0
+60
+0
+0
+Scratch
+0
+40
+0
+0
 #31
 Nidoqueen
 31
@@ -691,6 +935,26 @@ Nidoqueen
 75
 85
 76
+Poison Sting
+3
+15
+0
+0
+Tackle
+0
+35
+0
+0
+Bite
+0
+60
+0
+0
+Scratch
+0
+40
+0
+0
 #32
 NidoranM
 32
@@ -702,6 +966,26 @@ NidoranM
 40
 40
 50
+Poison Sting
+3
+15
+0
+0
+Tackle
+0
+35
+0
+0
+Bite
+0
+60
+0
+0
+Scratch
+0
+40
+0
+0
 #33
 Nidorino
 33
@@ -713,6 +997,26 @@ Nidorino
 55
 55
 65
+Poison Sting
+3
+15
+0
+0
+Tackle
+0
+35
+0
+0
+Bite
+0
+60
+0
+0
+Scratch
+0
+40
+0
+0
 #34
 Nidoking
 34
@@ -724,6 +1028,26 @@ Nidoking
 85
 75
 85
+Poison Sting
+3
+15
+0
+0
+Tackle
+0
+35
+0
+0
+Bite
+0
+60
+0
+0
+Scratch
+0
+40
+0
+0
 #35
 Clefairy
 35
@@ -735,6 +1059,26 @@ Clefairy
 60
 65
 35
+Pound
+0
+40
+0
+0
+Mega Punch
+0
+80
+0
+0
+Body Slam
+0
+85
+0
+0
+Submission
+1
+80
+0
+0
 #36
 Clefable
 36
@@ -746,6 +1090,26 @@ Clefable
 85
 90
 60
+Pound
+0
+40
+0
+0
+Mega Punch
+0
+80
+0
+0
+Body Slam
+0
+85
+0
+0
+Submission
+1
+80
+0
+0
 #37
 Vulpix
 37
@@ -757,6 +1121,26 @@ Vulpix
 50
 65
 65
+Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0
+Body Slam
+0
+85
+0
+0
 #38
 Ninetales
 38
@@ -768,6 +1152,26 @@ Ninetales
 81
 100
 100
+Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0
+Body Slam
+0
+85
+0
+0
 #39
 Jigglypuff
 39
@@ -779,6 +1183,26 @@ Jigglypuff
 45
 25
 20
+Pound
+0
+40
+0
+0
+Body Slam
+0
+85
+0
+0
+Mega Punch
+0
+80
+0
+0
+Submission
+1
+80
+0
+0
 #40
 Wigglytuff
 40
@@ -790,6 +1214,26 @@ Wigglytuff
 85
 50
 45
+Pound
+0
+40
+0
+0
+Body Slam
+0
+85
+0
+0
+Mega Punch
+0
+80
+0
+0
+Submission
+1
+80
+0
+0
 #41
 Zubat
 41
@@ -801,6 +1245,26 @@ Zubat
 30
 40
 55
+Wing Attack
+2
+35
+0
+0
+Bite
+0
+60
+0
+0
+Take Down
+0
+90
+0
+0
+Swift
+0
+60
+1
+0
 #42
 Golbat
 42
@@ -812,6 +1276,26 @@ Golbat
 65
 75
 90
+Wing Attack
+2
+35
+0
+0
+Bite
+0
+60
+0
+0
+Take Down
+0
+90
+0
+0
+Swift
+0
+60
+1
+0
 #43
 Oddish
 43
@@ -827,17 +1311,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #44
 Gloom
@@ -854,17 +1342,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #45
 Vileplume
@@ -881,17 +1373,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #46
 Paras
@@ -908,17 +1404,21 @@ Vine Whip
 10
 45
 0
+0
 X-Scissor
 6
 80
+0
 0
 Slash
 0
 70
 0
+0
 Scratch
 0
 40
+0
 0
 #47
 Parasect
@@ -935,17 +1435,21 @@ Vine Whip
 10
 45
 0
+0
 X-Scissor
 6
 80
+0
 0
 Slash
 0
 70
 0
+0
 Scratch
 0
 40
+0
 0
 #48
 Venonat
@@ -962,17 +1466,21 @@ Sludge
 3
 65
 1
+0
 X-Scissor
 6
 80
+0
 0
 Psychic
 12
 90
 1
+0
 Tackle
 0
 35
+0
 0
 #49
 Venomoth
@@ -989,17 +1497,21 @@ Sludge
 3
 65
 1
+0
 X-Scissor
 6
 80
+0
 0
 Psychic
 12
 90
 1
+0
 Tackle
 0
 35
+0
 0
 #50
 Diglett
@@ -1012,6 +1524,26 @@ Diglett
 35
 45
 95
+Scratch
+0
+40
+0
+0
+Earthquake
+4
+100
+0
+0
+Slash
+0
+70
+0
+0
+Rock Slide
+5
+75
+0
+0
 #51
 Dugtrio
 51
@@ -1023,6 +1555,26 @@ Dugtrio
 50
 70
 120
+Scratch
+0
+40
+0
+0
+Earthquake
+4
+100
+0
+0
+Slash
+0
+70
+0
+0
+Rock Slide
+5
+75
+0
+0
 #52
 Meowth
 52
@@ -1034,6 +1586,26 @@ Meowth
 40
 40
 90
+Scratch
+0
+40
+0
+0
+Bite
+0
+60
+0
+0
+Pay Day
+0
+40
+0
+0
+Slash
+0
+70
+0
+0
 #53
 Persian
 53
@@ -1043,6 +1615,26 @@ Persian
 65
 65
 115
+Scratch
+0
+40
+0
+0
+Bite
+0
+60
+0
+0
+Pay Day
+0
+40
+0
+0
+Slash
+0
+70
+0
+0
 #54
 Psyduck
 54
@@ -1054,6 +1646,26 @@ Psyduck
 65
 50
 55
+Scratch
+0
+40
+0
+0
+Confusion
+12
+50
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Mega Punch
+0
+80
+0
+0
 #55
 Golduck
 55
@@ -1065,6 +1677,26 @@ Golduck
 95
 80
 85
+Scratch
+0
+40
+0
+0
+Confusion
+12
+50
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Mega Punch
+0
+80
+0
+0
 #56
 Mankey
 56
@@ -1076,6 +1708,26 @@ Mankey
 35
 45
 70
+Scratch
+0
+40
+0
+0
+Karate Chop
+0
+50
+0
+0
+Low Kick
+1
+50
+0
+0
+Submission
+1
+80
+0
+0
 #57
 Primeape
 57
@@ -1087,6 +1739,26 @@ Primeape
 60
 70
 95
+Scratch
+0
+40
+0
+0
+Karate Chop
+0
+50
+0
+0
+Low Kick
+1
+50
+0
+0
+Submission
+1
+80
+0
+0
 #58
 Growlithe
 58
@@ -1098,6 +1770,45 @@ Growlithe
 70
 50
 60
+Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0
+Body Slam
+0
+85
+0
+0
+Body Slam
+0
+85
+0
+0
 #59
 Arcanine
 59
@@ -1109,6 +1820,26 @@ Arcanine
 100
 80
 95
+Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0
+Body Slam
+0
+85
+0
+0
 #60
 Poliwag
 60
@@ -1120,6 +1851,26 @@ Poliwag
 40
 40
 90
+Bubble
+9
+20
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Bite
+0
+60
+0
+0
+Surf
+9
+95
+1
+0
 #61
 Poliwhirl
 61
@@ -1131,6 +1882,26 @@ Poliwhirl
 50
 50
 90
+Bubble
+9
+20
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Bite
+0
+60
+0
+0
+Surf
+9
+95
+1
+0
 #62
 Poliwrath
 62
@@ -1142,6 +1913,26 @@ Poliwrath
 70
 90
 70
+Submission
+1
+80
+0
+0
+Hydro Pump
+9
+120
+1
+0
+Bite
+0
+60
+0
+0
+Surf
+9
+95
+1
+0
 #63
 Abra
 63
@@ -1153,6 +1944,26 @@ Abra
 105
 55
 90
+Mega Punch
+0
+80
+0
+0
+Psychic
+12
+90
+1
+0
+Body Slam
+0
+85
+0
+0
+Tri Attack
+0
+80
+1
+0
 #64
 Kadabra
 64
@@ -1164,6 +1975,26 @@ Kadabra
 120
 70
 105
+Mega Punch
+0
+80
+0
+0
+Psychic
+12
+90
+1
+0
+Body Slam
+0
+85
+0
+0
+Tri Attack
+0
+80
+1
+0
 #65
 Alakazam
 65
@@ -1175,6 +2006,26 @@ Alakazam
 135
 95
 120
+Mega Punch
+0
+80
+0
+0
+Psychic
+12
+90
+1
+0
+Body Slam
+0
+85
+0
+0
+Tri Attack
+0
+80
+1
+0
 #66
 Machop
 66
@@ -1186,6 +2037,26 @@ Machop
 35
 35
 35
+Karate Chop
+0
+50
+0
+0
+Low Kick
+1
+50
+0
+0
+Submission
+1
+80
+0
+0
+Mega Punch
+0
+80
+0
+0
 #67
 Machoke
 67
@@ -1197,6 +2068,26 @@ Machoke
 50
 60
 45
+Karate Chop
+0
+50
+0
+0
+Low Kick
+1
+50
+0
+0
+Submission
+1
+80
+0
+0
+Mega Punch
+0
+80
+0
+0
 #68
 Machamp
 68
@@ -1208,6 +2099,26 @@ Machamp
 65
 85
 55
+Karate Chop
+0
+50
+0
+0
+Low Kick
+1
+50
+0
+0
+Submission
+1
+80
+0
+0
+Mega Punch
+0
+80
+0
+0
 #69
 Bellsprout
 69
@@ -1223,17 +2134,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #70
 Weepinbell
@@ -1250,17 +2165,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #71
 Victreebel
@@ -1277,17 +2196,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Sludge
 3
 65
 1
+0
 Tackle
 0
 40
+0
 0
 #72
 Tentacool
@@ -1300,6 +2223,26 @@ Tentacool
 50
 100
 70
+Acid
+3
+40
+1
+0
+Water Gun
+9
+40
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #73
 Tentacruel
 73
@@ -1311,6 +2254,26 @@ Tentacruel
 80
 120
 100
+Acid
+3
+40
+1
+0
+Water Gun
+9
+40
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #74
 Geodude
 74
@@ -1322,6 +2285,26 @@ Geodude
 30
 30
 20
+Tackle
+0
+35
+0
+0
+Rock Throw
+5
+50
+0
+0
+Earthquake
+4
+100
+0
+0
+Rock Slide
+5
+75
+0
+0
 #75
 Graveler
 75
@@ -1333,6 +2316,26 @@ Graveler
 45
 45
 35
+Tackle
+0
+35
+0
+0
+Rock Throw
+5
+50
+0
+0
+Earthquake
+4
+100
+0
+0
+Rock Slide
+5
+75
+0
+0
 #76
 Golem
 76
@@ -1344,6 +2347,26 @@ Golem
 55
 65
 45
+Tackle
+0
+35
+0
+0
+Rock Throw
+5
+50
+0
+0
+Earthquake
+4
+100
+0
+0
+Rock Slide
+5
+75
+0
+0
 #77
 Ponyta
 77
@@ -1355,6 +2378,26 @@ Ponyta
 65
 65
 90
+Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0
+Body Slam
+0
+85
+0
+0
 #78
 Rapidash
 78
@@ -1366,6 +2409,26 @@ Rapidash
 80
 80
 105
+Ember
+8
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Flamethrower
+8
+95
+1
+0
+Body Slam
+0
+85
+0
+0
 #79
 Slowpoke
 79
@@ -1377,6 +2440,26 @@ Slowpoke
 40
 40
 15
+Tackle
+0
+40
+0
+0
+Confusion
+12
+50
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Mega Punch
+0
+80
+0
+0
 #80
 Slowbro
 80
@@ -1388,6 +2471,26 @@ Slowbro
 100
 80
 30
+Tackle
+0
+40
+0
+0
+Confusion
+12
+50
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Mega Punch
+0
+80
+0
+0
 #81
 Magnemite
 81
@@ -1399,6 +2502,26 @@ Magnemite
 95
 55
 45
+Tackle
+0
+35
+0
+0
+ThunderShock
+11
+40
+1
+0
+Swift
+0
+60
+1
+0
+Thunderbolt
+11
+95
+1
+0
 #82
 Magneton
 82
@@ -1410,6 +2533,26 @@ Magneton
 120
 70
 70
+Tackle
+0
+35
+0
+0
+ThunderShock
+11
+40
+1
+0
+Swift
+0
+60
+1
+0
+Thunderbolt
+11
+95
+1
+0
 #83
 Farfetch'd
 83
@@ -1421,6 +2564,26 @@ Farfetch'd
 58
 62
 60
+Peck
+1
+35
+0
+0
+Slash
+0
+70
+0
+0
+Body Slam
+0
+85
+0
+0
+Swift
+0
+60
+1
+0
 #84
 Doduo
 84
@@ -1432,6 +2595,26 @@ Doduo
 35
 35
 75
+Drill Peck
+1
+80
+0
+0
+Tri Attack
+0
+80
+1
+0
+Body Slam
+0
+85
+0
+0
+Sky Attack
+1
+140
+0
+0
 #85
 Dodrio
 85
@@ -1443,6 +2626,26 @@ Dodrio
 60
 60
 110
+Drill Peck
+1
+80
+0
+0
+Tri Attack
+0
+80
+1
+0
+Body Slam
+0
+85
+0
+0
+Sky Attack
+1
+140
+0
+0
 #86
 Seel
 86
@@ -1454,6 +2657,26 @@ Seel
 45
 70
 45
+Headbutt
+0
+70
+0
+0
+Aurora Beam
+13
+65
+1
+0
+Take Down
+0
+90
+0
+0
+Ice Beam
+13
+95
+1
+0
 #87
 Dewgong
 87
@@ -1465,6 +2688,26 @@ Dewgong
 70
 95
 70
+Headbutt
+0
+70
+0
+0
+Aurora Beam
+13
+65
+1
+0
+Take Down
+0
+90
+0
+0
+Ice Beam
+13
+95
+1
+0
 #88
 Grimer
 88
@@ -1476,6 +2719,26 @@ Grimer
 40
 50
 25
+Pound
+0
+40
+0
+0
+Sludge
+3
+65
+1
+0
+Body Slam
+0
+85
+0
+0
+Fire Blast
+8
+120
+1
+0
 #89
 Muk
 89
@@ -1487,6 +2750,26 @@ Muk
 65
 100
 50
+Pound
+0
+40
+0
+0
+Sludge
+3
+65
+1
+0
+Body Slam
+0
+85
+0
+0
+Fire Blast
+8
+120
+1
+0
 #90
 Shellder
 90
@@ -1498,6 +2781,26 @@ Shellder
 45
 25
 40
+Tackle
+0
+35
+0
+0
+Aurora Beam
+13
+65
+1
+0
+Clamp
+9
+35
+0
+0
+Ice Beam
+13
+95
+1
+0
 #91
 Cloyster
 91
@@ -1509,6 +2812,26 @@ Cloyster
 85
 45
 70
+Tackle
+0
+35
+0
+0
+Aurora Beam
+13
+65
+1
+0
+Clamp
+9
+35
+0
+0
+Ice Beam
+13
+95
+1
+0
 #92
 Gastly
 92
@@ -1520,6 +2843,26 @@ Gastly
 100
 35
 80
+Lick
+7
+20
+0
+0
+Thunderbolt
+11
+95
+1
+0
+Psychic
+12
+90
+1
+0
+Thunder
+11
+120
+1
+0
 #93
 Haunter
 93
@@ -1531,6 +2874,26 @@ Haunter
 115
 55
 95
+Lick
+7
+20
+0
+0
+Thunderbolt
+11
+95
+1
+0
+Psychic
+12
+90
+1
+0
+Thunder
+11
+120
+1
+0
 #94
 Gengar
 94
@@ -1542,6 +2905,26 @@ Gengar
 130
 75
 110
+Lick
+7
+20
+0
+0
+Thunderbolt
+11
+95
+1
+0
+Psychic
+12
+90
+1
+0
+Thunder
+11
+120
+1
+0
 #95
 Onix
 95
@@ -1553,6 +2936,26 @@ Onix
 30
 45
 70
+Tackle
+0
+35
+0
+0
+Rock Throw
+5
+50
+0
+0
+Slam
+0
+80
+0
+0
+Earthquake
+4
+100
+0
+0
 #96
 Drowzee
 96
@@ -1564,6 +2967,26 @@ Drowzee
 43
 90
 42
+Mega Punch
+0
+80
+0
+0
+Psychic
+12
+90
+1
+0
+Body Slam
+0
+85
+0
+0
+Tri Attack
+0
+80
+1
+0
 #97
 Hypno
 97
@@ -1575,6 +2998,26 @@ Hypno
 73
 115
 67
+Mega Punch
+0
+80
+0
+0
+Psychic
+12
+90
+1
+0
+Body Slam
+0
+85
+0
+0
+Tri Attack
+0
+80
+1
+0
 #98
 Krabby
 98
@@ -1586,6 +3029,26 @@ Krabby
 25
 25
 50
+Bubble
+9
+20
+1
+0
+Crabhammer
+9
+90
+0
+0
+ViceGrip
+0
+55
+0
+0
+Stomp
+0
+65
+0
+0
 #99
 Kingler
 99
@@ -1597,6 +3060,26 @@ Kingler
 50
 50
 75
+Bubble
+9
+20
+1
+0
+Crabhammer
+9
+90
+0
+0
+ViceGrip
+0
+55
+0
+0
+Stomp
+0
+65
+0
+0
 #100
 Voltorb
 100
@@ -1608,6 +3091,26 @@ Voltorb
 55
 55
 100
+Thunderbolt
+11
+90
+1
+0
+Quick Attack
+0
+40
+0
+1
+ThunderShock
+11
+40
+1
+0
+Slam
+0
+80
+0
+0
 #101
 Electrode
 101
@@ -1619,6 +3122,26 @@ Electrode
 80
 80
 150
+Thunderbolt
+11
+90
+1
+0
+Quick Attack
+0
+40
+0
+1
+ThunderShock
+11
+40
+1
+0
+Slam
+0
+80
+0
+0
 #102
 Exeggcute
 102
@@ -1630,22 +3153,26 @@ Exeggcute
 60
 45
 40
-Razor Leaf
-10
-55
+Egg Bomb
 0
-Vine Whip
-10
-45
+100
+0
+0
+Take Down
+0
+90
+0
 0
 Confusion
 12
 50
 1
+0
 Psychic
 12
 90
 1
+0
 #103
 Exeggutor
 103
@@ -1657,22 +3184,26 @@ Exeggutor
 125
 75
 55
-Razor Leaf
-10
-55
+Egg Bomb
 0
-Vine Whip
-10
-45
+100
+0
+0
+Take Down
+0
+90
+0
 0
 Confusion
 12
 50
 1
+0
 Psychic
 12
 90
 1
+0
 #104
 Cubone
 104
@@ -1684,6 +3215,26 @@ Cubone
 40
 50
 35
+Bone Club
+4
+65
+0
+0
+Thrash
+0
+90
+0
+0
+Headbutt
+0
+70
+0
+0
+Earthquake
+4
+100
+0
+0
 #105
 Marowak
 105
@@ -1695,6 +3246,26 @@ Marowak
 50
 80
 45
+Bone Club
+4
+65
+0
+0
+Thrash
+0
+90
+0
+0
+Headbutt
+0
+70
+0
+0
+Earthquake
+4
+100
+0
+0
 #106
 Hitmonlee
 106
@@ -1706,6 +3277,26 @@ Hitmonlee
 35
 110
 87
+Rolling Kick
+1
+60
+0
+0
+Mega Kick
+0
+120
+0
+0
+Submission
+1
+80
+0
+0
+Swift
+0
+60
+1
+0
 #107
 Hitmonchan
 107
@@ -1717,6 +3308,26 @@ Hitmonchan
 35
 110
 76
+Fire Punch
+8
+75
+0
+0
+Ice Punch
+13
+75
+0
+0
+ThunderPunch
+11
+75
+0
+0
+Mega Punch
+0
+80
+0
+0
 #108
 Lickitung
 108
@@ -1728,6 +3339,26 @@ Lickitung
 60
 75
 30
+Stomp
+0
+65
+0
+0
+Slam
+0
+80
+0
+0
+Skull Bash
+0
+100
+0
+0
+Earthquake
+4
+100
+0
+0
 #109
 Koffing
 109
@@ -1739,6 +3370,26 @@ Koffing
 60
 45
 35
+Tackle
+0
+35
+0
+0
+Smog
+3
+20
+0
+0
+Sludge
+3
+65
+1
+0
+Thunderbolt
+11
+95
+0
+0
 #110
 Weezing
 110
@@ -1750,6 +3401,26 @@ Weezing
 85
 70
 60
+Tackle
+0
+35
+0
+0
+Smog
+3
+20
+0
+0
+Sludge
+3
+65
+1
+0
+Thunderbolt
+11
+95
+0
+0
 #111
 Rhyhorn
 111
@@ -1761,6 +3432,26 @@ Rhyhorn
 30
 30
 25
+Horn Attack
+0
+65
+0
+0
+Stomp
+0
+65
+0
+0
+Take Down
+0
+90
+0
+0
+Earthquake
+4
+100
+0
+0
 #112
 Rhydon
 112
@@ -1772,6 +3463,26 @@ Rhydon
 45
 45
 40
+Horn Attack
+0
+65
+0
+0
+Stomp
+0
+65
+0
+0
+Take Down
+0
+90
+0
+0
+Earthquake
+4
+100
+0
+0
 #113
 Chansey
 113
@@ -1783,6 +3494,26 @@ Chansey
 35
 105
 50
+Pound
+0
+40
+0
+0
+Mega Punch
+0
+80
+0
+0
+Submission
+0
+80
+0
+0
+Thunderbolt
+11
+95
+1
+0
 #114
 Tangela
 114
@@ -1822,6 +3553,26 @@ Kangaskhan
 80
 90
 #116
+Bite
+0
+60
+0
+0
+Mega Punch
+0
+80
+0
+0
+Dizzy Punch
+0
+70
+0
+0
+Skull Bash
+0
+100
+0
+0
 Horsea
 116
 9
@@ -1832,6 +3583,26 @@ Horsea
 70
 25
 60
+Bubble
+9
+20
+1
+0
+Water Gun
+9
+40
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #117
 Seadra
 117
@@ -1843,6 +3614,26 @@ Seadra
 95
 45
 85
+Bubble
+9
+20
+1
+0
+Water Gun
+9
+40
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #118
 Goldeen
 118
@@ -1854,6 +3645,26 @@ Goldeen
 35
 50
 63
+Peck
+2
+35
+0
+0
+Waterfall
+9
+80
+0
+0
+Horn Attack
+0
+65
+0
+0
+Ice Beam
+13
+95
+1
+0
 #119
 Seaking
 119
@@ -1865,6 +3676,26 @@ Seaking
 65
 80
 68
+Peck
+2
+35
+0
+0
+Waterfall
+9
+80
+0
+0
+Horn Attack
+0
+65
+0
+0
+Ice Beam
+13
+95
+1
+0
 #120
 Staryu
 120
@@ -1876,6 +3707,26 @@ Staryu
 70
 55
 85
+Tackle
+0
+35
+0
+0
+Psychic
+12
+90
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Swift
+0
+60
+1
+0
 #121
 Starmie
 121
@@ -1887,6 +3738,26 @@ Starmie
 100
 85
 115
+Tackle
+0
+35
+0
+0
+Psychic
+12
+90
+1
+0
+Hydro Pump
+9
+120
+1
+0
+Swift
+0
+60
+1
+0
 #122
 Mr. Mime
 122
@@ -1898,6 +3769,26 @@ Mr. Mime
 100
 120
 90
+Confusion
+12
+50
+1
+0
+Psychic
+12
+90
+1
+0
+Thunderbolt
+11
+95
+1
+0
+Take Down
+0
+90
+0
+0
 #123
 Scyther
 123
@@ -1909,6 +3800,26 @@ Scyther
 55
 80
 105
+Quick Attack
+0
+40
+0
+1
+Wing Attack
+2
+35
+0
+0
+Slash
+0
+70
+0
+0
+Take Down
+0
+90
+0
+0
 #124
 Jynx
 124
@@ -1920,6 +3831,26 @@ Jynx
 115
 95
 95
+Pound
+0
+40
+0
+0
+Lick
+7
+20
+0
+0
+Blizzard
+13
+120
+1
+0
+Body Slam
+0
+85
+0
+0
 #125
 Electabuzz
 125
@@ -1931,6 +3862,26 @@ Electabuzz
 95
 85
 105
+Quick Attack
+0
+40
+0
+1
+ThunderShock
+11
+40
+1
+0
+ThunderPunch
+11
+75
+0
+0
+Thunder
+11
+120
+1
+0
 #126
 Magmar
 126
@@ -1942,6 +3893,26 @@ Magmar
 100
 85
 93
+Ember
+8
+40
+1
+0
+Fire Punch
+8
+75
+0
+0
+Flamethrower
+8
+95
+1
+0
+Mega Punch
+0
+80
+0
+0
 #127
 Pinsir
 127
@@ -1953,6 +3924,26 @@ Pinsir
 55
 70
 85
+ViceGrip
+0
+55
+0
+0
+Slash
+0
+70
+0
+0
+Take Down
+0
+90
+0
+0
+Submission
+1
+80
+0
+0
 #128
 Tauros
 128
@@ -1964,6 +3955,26 @@ Tauros
 40
 70
 110
+Tackle
+0
+35
+0
+0
+Stomp
+0
+65
+0
+0
+Take Down
+0
+90
+0
+0
+Body Slam
+0
+85
+0
+0
 #129
 Magikarp
 129
@@ -1975,6 +3986,26 @@ Magikarp
 15
 20
 80
+Splash
+0
+0
+0
+0
+Splash
+0
+0
+0
+0
+Splash
+0
+0
+0
+0
+Splash
+0
+0
+0
+0
 #130
 Gyarados
 130
@@ -1986,6 +4017,26 @@ Gyarados
 60
 100
 81
+Hydro Pump
+9
+120
+1
+0
+Bite
+0
+60
+0
+0
+Tackle
+0
+35
+0
+0
+Surf
+9
+95
+1
+0
 #131
 Lapras
 131
@@ -1997,6 +4048,26 @@ Lapras
 85
 95
 60
+Surf
+9
+95
+1
+0
+Ice Beam
+13
+95
+1
+0
+Body Slam
+0
+85
+0
+0
+Blizzard
+13
+120
+1
+0
 #132
 Ditto
 132
@@ -2008,6 +4079,26 @@ Ditto
 48
 48
 48
+Transform
+0
+0
+0
+0
+Transform
+0
+0
+0
+0
+Transform
+0
+0
+0
+0
+Transform
+0
+0
+0
+0
 #133
 Eevee
 133
@@ -2019,6 +4110,26 @@ Eevee
 45
 65
 55
+Tackle
+0
+35
+0
+0
+Quick Attack
+0
+40
+0
+1
+Bite
+0
+60
+0
+0
+Take Down
+0
+90
+0
+0
 #134
 Vaporeon
 134
@@ -2030,6 +4141,26 @@ Vaporeon
 110
 95
 65
+Tackle
+0
+35
+0
+0
+Quick Attack
+0
+40
+0
+1
+Hydro Pump
+9
+120
+1
+0
+Aurora Beam
+13
+65
+1
+0
 #135
 Jolteon
 135
@@ -2041,6 +4172,26 @@ Jolteon
 110
 95
 130
+ThunderShock
+11
+40
+1
+0
+Quick Attack
+0
+40
+0
+1
+Thunder
+11
+120
+1
+0
+Body Slam
+0
+85
+0
+0
 #136
 Flareon
 136
@@ -2052,6 +4203,26 @@ Flareon
 85
 75
 40
+Ember
+8
+35
+1
+0
+Quick Attack
+0
+40
+0
+1
+Bite
+0
+60
+0
+0
+Flamethrower
+8
+95
+1
+0
 #137
 Porygon
 137
@@ -2063,6 +4234,26 @@ Porygon
 85
 75
 40
+Tackle
+0
+35
+0
+0
+Psybeam
+12
+65
+1
+0
+Tri Attack
+0
+80
+1
+0
+Thunderbolt
+11
+95
+1
+0
 #138
 Omanyte
 138
@@ -2074,6 +4265,26 @@ Omanyte
 90
 55
 35
+Water Gun
+9
+40
+1
+0
+Horn Attack
+0
+65
+0
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #139
 Omastar
 139
@@ -2085,6 +4296,26 @@ Omastar
 115
 70
 55
+Water Gun
+9
+40
+1
+0
+Horn Attack
+0
+65
+0
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #140
 Kabuto
 140
@@ -2096,6 +4327,26 @@ Kabuto
 55
 45
 55
+Water Gun
+9
+40
+1
+0
+Horn Attack
+0
+65
+0
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #141
 Kabutops
 141
@@ -2107,6 +4358,26 @@ Kabutops
 65
 70
 80
+Water Gun
+9
+40
+1
+0
+Horn Attack
+0
+65
+0
+0
+Hydro Pump
+9
+120
+1
+0
+Ice Beam
+13
+95
+1
+0
 #142
 Aerodactyl
 142
@@ -2118,6 +4389,26 @@ Aerodactyl
 60
 75
 130
+Wing Attack
+2
+35
+0
+0
+Bite
+0
+60
+0
+0
+Take Down
+0
+90
+0
+0
+Fire Blast
+8
+120
+1
+0
 #143
 Snorlax
 143
@@ -2129,6 +4420,26 @@ Snorlax
 65
 110
 30
+Headbutt
+0
+70
+0
+0
+Body Slam
+0
+85
+0
+0
+Earthquake
+4
+100
+0
+0
+Thunderbolt
+11
+95
+1
+0
 #144
 Articuno
 144
@@ -2140,6 +4451,26 @@ Articuno
 95
 125
 85
+Peck
+2
+35
+0
+0
+Ice Beam
+13
+95
+1
+0
+Blizzard
+13
+120
+1
+0
+Razor Wind
+0
+80
+1
+0
 #145
 Zapdos
 145
@@ -2151,6 +4482,26 @@ Zapdos
 125
 90
 100
+ThunderShock
+11
+40
+1
+0
+Drill Peck
+2
+80
+0
+0
+Thunder
+11
+120
+1
+0
+Razor Wind
+0
+80
+1
+0
 #146
 Moltres
 146
@@ -2162,6 +4513,26 @@ Moltres
 125
 85
 90
+Peck
+2
+35
+0
+0
+Razor Wind
+0
+80
+1
+0
+Fire Blast
+8
+120
+1
+0
+Take Down
+0
+90
+0
+0
 #147
 Dratini
 147
@@ -2173,6 +4544,26 @@ Dratini
 50
 50
 50
+Slam
+0
+80
+0
+0
+Body Slam
+0
+85
+0
+0
+BubbleBeam
+9
+65
+1
+0
+Ice Beam
+13
+95
+1
+0
 #148
 Dragonair
 148
@@ -2184,6 +4575,26 @@ Dragonair
 70
 70
 70
+Slam
+0
+80
+0
+0
+Body Slam
+0
+85
+0
+0
+BubbleBeam
+9
+65
+1
+0
+Ice Beam
+13
+95
+1
+0
 #149
 Dragonite
 149
@@ -2195,6 +4606,26 @@ Dragonite
 100
 100
 80
+Slam
+0
+80
+0
+0
+Body Slam
+0
+85
+0
+0
+Skull Bash
+0
+100
+0
+0
+Thunderbolt
+11
+95
+1
+0
 #150
 Mewtwo
 150
@@ -2206,6 +4637,26 @@ Mewtwo
 154
 100
 130
+Confusion
+12
+50
+1
+0
+Psychic
+12
+90
+1
+0
+Swift
+0
+60
+1
+0
+Ice Beam
+13
+95
+1
+0
 #151
 Mew
 151
@@ -2217,27 +4668,26 @@ Mew
 100
 100
 100
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Pound
+0
+40
+0
+0
+Mega Punch
+0
+80
+0
+0
+Psychic
+12
+90
+1
+0
+Razor Wind
+0
+80
+1
+0
 
 
 
