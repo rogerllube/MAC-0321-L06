@@ -502,7 +502,6 @@ Pidgeotto
 63
 60
 55
-55
 50
 50
 71
@@ -565,7 +564,6 @@ Rattatta
 30
 56
 35
-35
 25
 35
 72
@@ -573,13 +571,16 @@ Tackle
 0
 35
 0
+0
 Hyper Fang
 0
 80
 0
+0
 Body Slam
 0
 85
+0
 0
 Quick Attack
 0
@@ -601,13 +602,16 @@ Tackle
 0
 35
 0
+0
 Hyper Fang
 0
 80
 0
+0
 Body Slam
 0
 85
+0
 0
 Quick Attack
 0
@@ -1609,6 +1613,8 @@ Slash
 #53
 Persian
 53
+0
+-1
 65
 70
 60
@@ -1784,25 +1790,6 @@ Flamethrower
 8
 95
 1
-0Ember
-8
-40
-1
-0
-Quick Attack
-0
-40
-0
-1
-Flamethrower
-8
-95
-1
-0
-Body Slam
-0
-85
-0
 0
 Body Slam
 0
@@ -3529,17 +3516,21 @@ Razor Leaf
 10
 55
 0
+0
 Vine Whip
 10
 45
+0
 0
 Slam
 0
 80
 0
+0
 Cut
 0
 50
+0
 0
 #115
 Kangaskhan
