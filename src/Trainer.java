@@ -75,7 +75,7 @@ public class Trainer {
 				}
 				System.out.println("Digite o número do pokémon a ser removido");
 				n = scan.nextInt();
-				nome = pokmn[n].getName();
+				nomedsfsd = pokmn[n].getName();
 				System.out.println("Pokémon a ser removido: " +nome);
 				System.out.println("Tem certeza que quer remover " +nome+ "? Digite s para confirmar ou qualquer outra coisa para alterar.");
 				cfm = scan.next();
