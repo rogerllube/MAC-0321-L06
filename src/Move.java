@@ -4,12 +4,14 @@ public class Move {
 	private int type;
 	private int damage;
 	private int physical;
+	private int priority;
 	
-	public Move (String nome, int tipo, int damage, int physical) {
+	public Move (String nome, int tipo, int damage, int physical, int prio) {
 		type = tipo;
 		this.damage = damage;
 		this.physical = physical;
 		name = nome;
+		priority = prio;
 	}
 	
 	public String getName() {
@@ -26,5 +28,8 @@ public class Move {
 	
 	public int getPhysical() {
 		return physical;
+	}
+	public int getPriority() {
+		return priority;
 	}
 }
