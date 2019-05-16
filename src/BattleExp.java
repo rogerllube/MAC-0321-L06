@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Battle extends Controller {
+public class BattleExp extends Controller{
 	private Trainer p1, p2;
 
 	private int turn = 1;
@@ -60,60 +60,51 @@ public class Battle extends Controller {
 		
 		public void action() {
 			int type1, type2;
-			boolean dead;
+			boolean dead = false;
 			type1 = a1.getType();
 			type2 = a2.getType();
 			int tie;
 			if (type1>=type2) {
 				if (type1 == 4) {
-					flee(p1);
+					addEvent(new Flee(p1));
 					System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 					return;
 				}
 				if (type1 == 3)
-					swap(p1);
+					addEvent(new Swap(p1));
 				if (type1 == 2)
-					item(p1);
+					addEvent(new Item(p1));
 				if(type1 == 1) 
 					if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
-						dead = attack(a1, p2);
+						addEvent(new Atta(a1, p2, dead));
 						if(p2.getOver()) {
 							System.out.println(p1.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 							return;
 						}
-						if(!dead) {
-							attack(a2, p1);
-							if(p1.getOver()) {
-								System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
-								return;
-							}
-						}
+						if(!dead)
+							addEvent(new Atta(a2, p1, dead));
 					}
 					else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
-						dead = attack(a2, p1);
+						addEvent(new Atta(a2, p1, dead));
 						if(p1.getOver()) {
 							System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 							return;
 						}
 						if (!dead)
-							attack(a1, p2);
-							if(p1.getOver()) {
-								System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
-								return;
-							}
+							addEvent(new Atta(a1, p2, dead));
 					}
 					else {
 						tie = ThreadLocalRandom.current().nextInt(0, 2);
 						if (tie == 0) {
-							dead = attack(a1, p2);
+							addEvent(new Atta(a1, p2, dead));
 							if(!p2.getOver() && !dead) {
-								attack(a2, p1);
+								addEvent(new Atta(a2, p1, dead));
 							}
 						}
 						else {
-							dead = attack(a2, p1);
+							addEvent(new Atta(a2, p1, dead));
 							if(!p1.getOver() && !dead)
-								attack(a1, p2);
+								addEvent(new Atta(a1, p2, dead));
 						}
 						if(p1.getOver()) {
 							System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
@@ -125,30 +116,32 @@ public class Battle extends Controller {
 							}
 					}
 				if (type2 == 4) {
-					flee(p2);
+					addEvent(new Flee(p2));
 					System.out.println(p1.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 					return;
 				}
 				if (type2 == 3)
-					swap(p2);
+					addEvent(new Swap(p2));
 				if (type2 == 2)
-					item(p2);	
+					addEvent(new Item(p2));	
 				if (type2 == 1 && type1 != 1) {
-					attack(a2, p1);
+					addEvent(new Atta(a2, p1, dead));
 					if(p1.getOver()) {
 						System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 						return;
 					}
 				}
 			
-			}
+		}
 			if (type2>type1) {
 				if (type2 == 4)
-					flee(p2);
+					addEvent(new Flee(p2));
 				if (type2 == 3)
-					swap(p2);
+					
+					addEvent(new Swap(p2));
+					System.out.println("Primeiro");
 				if (type2 == 2)
-					item(p2);
+					addEvent(new Item(p2));
 				if(p1.getOver()) {
 					System.out.println(p2.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 					return;
@@ -159,13 +152,14 @@ public class Battle extends Controller {
 				}
 				
 				if (type1 == 4)
-					flee(p1);
+					addEvent(new Flee(p1));
 				if (type1 == 3)
-					swap(p1);
+					addEvent(new Swap(p1));
 				if (type1 == 2)
-					item(p1);
+					addEvent(new Item(p1));
 				if(type1 == 1)
-					attack(a1, p2);
+					addEvent(new Atta(a1, p2, dead));
+					System.out.println("SEGUNDO");
 				if(p2.getOver()) {
 					System.out.println(p1.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 					return;
@@ -178,10 +172,17 @@ public class Battle extends Controller {
 			turn++;
 			addEvent(new CreateTurn());
 		}
-
-		private void swap(Trainer p) {
-			Pokemon a, b;
-			int troca;
+	}
+	
+	private class Swap extends Event {
+		Pokemon a, b;
+		int troca;
+		Trainer p;
+		
+		public Swap (Trainer t) {
+			p = t;
+		}	
+		public void action() {
 			p.getPokeList();
 			System.out.println(p.getName() + " digite o número do pokémon que deseja usar");
 			troca = scanner.nextInt();
@@ -190,14 +191,29 @@ public class Battle extends Controller {
 			b = p.getPoke(troca);
 			p.setPoke(b, p.getActive());
 			p.setPoke(a, troca);
-			
 		}
-
-		private void flee(Trainer p) {
-			p.setOver(true);	
+	}
+	
+	private class Flee extends Event {
+		Trainer p;
+		
+		public Flee (Trainer t) {
+			p = t;
 		}
 		
-		private void item(Trainer p) {
+		public void action() {
+			p.setOver(true);
+		}
+	
+	}
+	
+	private class Item extends Event {
+		Trainer p;
+		
+		public Item (Trainer t) {
+			p = t;
+		}
+		public void action() {
 			if(p.getItem() > 0) {
 				p.heal(scanner);
 				p.setItem();
@@ -206,37 +222,48 @@ public class Battle extends Controller {
 				System.out.println("Perdeu o turno");
 			}
 		}
+	}
+	
+	private class Atta extends Event {
+		private int damage;
+		boolean morreu;
+		int hp, troca;
+		Trainer ta;
+		Pokemon pokeA;
+		Move atk;
+		Trainer td;
+		Pokemon pokeD;
 		
-		private boolean attack(Action a, Trainer p) {
-			int damage;
-			boolean morreu = false;
-			int hp, troca;
-			Trainer ta = a.getTrainer();
-			Pokemon pokeA = ta.getActivePoke();
-			Move atk = pokeA.chooseAtk(scanner, a.getTrainer()); 
-			Trainer td = p;
-			Pokemon pokeD = td.getActivePoke();
-			
-			Pokemon morto, substituto;
-			
+		Pokemon morto, substituto;
+		
+		public Atta(Action a, Trainer p, boolean dead) {
+			morreu = dead;
+			ta = a.getTrainer();
+			pokeA = ta.getActivePoke();
+			atk = pokeA.chooseAtk(scanner, a.getTrainer());
+			td = p;
+			pokeD = td.getActivePoke();
 			damage = Attack.Dano(atk, pokeA, pokeD);
 			hp = pokeD.getHp();
+		}
+		
+		public void action() {
 			if(hp - damage <= 0) {
 				pokeD.setHp(0);
 				System.out.println(pokeA.getName()+ " atacou " +pokeD.getName()+ " com " +atk.getName()+ "!"+ System.lineSeparator() +pokeD.getName()+ " não tem mais hp");
 				td.setLeft();
-				
+			
 				if(td.getLeft() != 0) {
 					System.out.println("Escolha outro pokémon");
 					td.getPokeList();
 					troca = scanner.nextInt();
 					troca = td.setAtivo(troca, scanner);
-					morto = p.getPoke(p.getActive());
-					substituto = p.getPoke(troca);
-					p.setPoke(substituto, p.getActive());
-					p.setPoke(morto, troca);
+					morto = td.getPoke(td.getActive());
+					substituto = td.getPoke(troca);
+					td.setPoke(substituto, td.getActive());
+					td.setPoke(morto, troca);
 					morreu = true;
-					
+				
 				}
 				else {
 					td.setOver(true);
@@ -247,9 +274,9 @@ public class Battle extends Controller {
 				System.out.println(pokeA.getName()+ " atacou " +pokeD.getName() + " com " +atk.getName()+ "!"+ System.lineSeparator() +pokeD.getName()+ " tem " +pokeD.getHp()+ " de vida restando");
 				System.out.println("");
 			}
-			return morreu;
 		}
 	}
+	
 	private class ChooseLead extends Event{
 
 		
@@ -278,10 +305,8 @@ public class Battle extends Controller {
 		
 	}
 	public static void main(String[] args) {
-		Battle battle = new Battle();
+		BattleExp battle = new BattleExp();
 		battle.addEvent(battle.new Begin());
 		battle.run();
 	}
 }
-	
-
