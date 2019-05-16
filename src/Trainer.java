@@ -12,6 +12,9 @@ public class Trainer {
 	private int pokeball, maxBall;
 	private boolean acabou;
 	private boolean patt;
+	private boolean run;
+	private boolean capture;
+	private boolean human;
 	
 	public Trainer (Scanner scanner) {
 		boolean con = false;
@@ -40,6 +43,9 @@ public class Trainer {
 		item = maxItem = 6;
 		pokeball = maxBall = 100;
 		activePoke = 1;
+		run = false;
+		capture = false;
+		human = true;
 	}
 	
 	public Trainer (String nome) {
@@ -53,8 +59,13 @@ public class Trainer {
 		item = 6;
 		pokeball = 0;
 		activePoke = 1;
+		run = false;
+		capture = false;
+		human = false;
 	}
-	
+	public boolean getHuman() {
+		return human;
+	}
 	public void setOver(boolean over) {
 		acabou = over;
 	}
@@ -410,4 +421,17 @@ public class Trainer {
 	public boolean getPatt() {
 		return patt;
 	}
+	public void setRun(boolean value) {
+		run = value;
+	}
+	public boolean getRun() {
+		return run;
+	}
+	public void setCapture(boolean value) {
+		capture = value;
+	}
+	public boolean getCapture() {
+		return capture;
+	}
+	
 }

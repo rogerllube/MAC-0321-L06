@@ -57,8 +57,8 @@ public class Battle extends Controller {
 			System.out.println("[1]Ataque         [2]Usar Item" + System.lineSeparator() + "[3]Trocar Pokemon     [4]Fugir");
 			a2.setValues(scanner.nextInt(), p2);
 			System.out.println("");
-			if(a1.getType() == 1)
-				a1.setMove(p1.getActivePoke().chooseAtk(scanner, p1));
+			if(a2.getType() == 1)
+				a2.setMove(p2.getActivePoke().chooseAtk(scanner, p2));
 			p1.setPatt(true);
 			p2.setPatt(true);
 			addEvent(new ResolveTurn());			
