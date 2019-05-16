@@ -141,6 +141,7 @@ public class Wild extends Controller{
 			int tie;
 			int end = 0;
 			boolean capture = false;
+			p.setOver(false);
 			
 			if (type1 == 4) {
 				flee(p);
@@ -271,6 +272,8 @@ public class Wild extends Controller{
 						if(cap == false) {
 							p.changeParty(scanner, wildP);
 						}
+						System.out.println("Seu novo time e:" + System.lineSeparator());
+						p.getPokeList();
 						return true;
 					}
 					else {
@@ -293,7 +296,7 @@ public class Wild extends Controller{
 			Trainer td = p;
 			Pokemon pokeD = td.getActivePoke();
 			
-			damage = Attack.Dano(atk, pokeA, pokeD);
+			damage = Calc.Dano(atk, pokeA, pokeD);
 			hp = pokeD.getHp();
 			if(hp - damage <= 0) {
 				pokeD.setHp(0);
@@ -323,7 +326,7 @@ public class Wild extends Controller{
 			
 			Pokemon morto, substituto;
 			
-			damage = Attack.Dano(atk, pokeA, pokeD);
+			damage = Calc.Dano(atk, pokeA, pokeD);
 			hp = pokeD.getHp();
 			if(hp - damage <= 0) {
 				pokeD.setHp(0);
@@ -342,7 +345,7 @@ public class Wild extends Controller{
 					morreu = true;
 					
 				}
-				else {
+				else if (td.getLeft() == 0) {
 					td.setOver(true);
 				}
 			}
@@ -369,7 +372,7 @@ public class Wild extends Controller{
 	
 		Move esc = pokeD.chooseAtk(scanner, td);
 		
-		damage = Attack.Dano(atk, pokeA, pokeD);
+		damage = Calc.Dano(atk, pokeA, pokeD);
 		hp = pokeD.getHp();
 		if(hp - damage <= 0) {
 			pokeD.setHp(0);
@@ -398,7 +401,7 @@ public class Wild extends Controller{
 			System.out.println("");
 		}
 		if(morreu != true) {
-			damage = Attack.Dano(esc, pokeD, pokeA);
+			damage = Calc.Dano(esc, pokeD, pokeA);
 			hp = pokeA.getHp();
 			if(hp - damage <= 0) {
 				pokeD.setHp(0);

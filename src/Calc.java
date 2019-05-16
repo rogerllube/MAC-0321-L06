@@ -1,4 +1,4 @@
-public abstract class Attack {
+public abstract class Calc {
 
 	public static int Dano (Move m, Pokemon a, Pokemon b) {
 		Tabela typeEf = new Tabela();
