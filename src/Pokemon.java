@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Pokemon {
 	
@@ -95,6 +96,11 @@ public class Pokemon {
 		return move[esc];
 	}
 
+	public Move chooseAtk(Trainer t) {
+		int esc = ThreadLocalRandom.current().nextInt(1, 5);
+		return move[esc];
+	}
+	
 	private void getMoveList() {
 		System.out.println("Digite [1] para utilizar: " + move[1].getName() + System.lineSeparator() + "Digite [2] para utilizar: " + move[2].getName() + System.lineSeparator() + "Digite [3] para utilizar: " + move[3].getName() + System.lineSeparator() + "Digite [4] para utilizar: " + move[4].getName() + System.lineSeparator());
 	}
