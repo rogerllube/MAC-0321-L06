@@ -1,11 +1,11 @@
-public class Attack {
-	
-	public int Dano (Move m, Pokemon a, Pokemon b) {
+public abstract class Attack {
+
+	public static int Dano (Move m, Pokemon a, Pokemon b) {
 		Tabela typeEf = new Tabela();
 		double danoD, atk, def;
 		int danoI;
 		int phys = m.getPhysical();
-		int dam = m.getDamege();
+		int dam = m.getDamage();
 		int typ = m.getType();
 		
 		if(b.getType2() == -1) {
@@ -41,5 +41,4 @@ public class Attack {
 			}
 		}
 	}
-
 }

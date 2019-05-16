@@ -20,13 +20,11 @@ public class Move {
 		return type;
 	}
 	
-	public int getDamege() {
+	public int getDamage() {
 		return damage;
 	}
 	
 	public int getPhysical() {
 		return physical;
 	}
-	
-	
 }
