@@ -81,8 +81,13 @@ public class Battle extends Controller {
 							System.out.println(p1.getName()+" e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
 							return;
 						}
-						if(!dead)
+						if(!dead) {
 							attack(a2, p1);
+							if(p1.getOver()) {
+								System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
+								return;
+							}
+						}
 					}
 					else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
 						dead = attack(a2, p1);
@@ -92,6 +97,10 @@ public class Battle extends Controller {
 						}
 						if (!dead)
 							attack(a1, p2);
+							if(p1.getOver()) {
+								System.out.println(p2.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+turn+ " turnos.");
+								return;
+							}
 					}
 					else {
 						tie = ThreadLocalRandom.current().nextInt(0, 2);
@@ -132,7 +141,7 @@ public class Battle extends Controller {
 					}
 				}
 			
-		}
+			}
 			if (type2>type1) {
 				if (type2 == 4)
 					flee(p2);
