@@ -13,6 +13,24 @@ instruções dadas pela lista de exercícios 06 da disciplina MAC0321.
 
 Trata-se de uma versão básica do popular jogo Pokémon, no qual os jogadores capturam monstrinhos e os utilizam em batalhas.
 
-# Como jogar
+# Sobre o jogo
 A fim de atender ao que foi pedido na lista, o jogo é divido em 2 partes: uma na qual 2 pessoas jogam simultâneamente e outra na qual
 apenas 1 pode jogar. 
+
+O modo multijogador consiste em uma simulação de uma batalha Pokémon, ou seja, cada jogador escolhe de 1 a 6 Pokémon e
+posteriormente realizam uma batalha com seus respectivos Pokémon. Ao derrotar todos os Pokémon do adversário ganha-se uma partida.
+
+Quando escolhida a opção solo, o jogador escolhe apenas 1 Pokémon e o objetivo do jogo torna-se capturar e batalhar contra Pokémon 
+aleatórios espalhados pelo mapa.
+
+# Como jogar
+Ao iniciar o programa, o usuário depara-se com uma tela inicial na qual escolhe-se o modo de jogo desejado, devendo-se apertar a 
+tecla [1] se quiser escolher multiplayer ou [2] se quiser solo. 
+
+Escolhendo a opção [1], cada jogador deve digitar seu nome. Assim que confirmados os nomes, o primeiro jogador escolhe os Pokémon que 
+gostaria de utilizar na batalha. Ele poderá escolher até 6, de uma lista impressa na tela contendo 151 Pokémon. Vale-se ressaltar que uma
+vez selecionada a opção de finalizar a seleção do seu time, será possível a alteração do mesmo. Essa alteração será disponível 
+apenas imediatamente após o jogador selecionar [f] para finalizar o time e permitirá que ele possa trocar um Pokémon escolhido por outro
+dentro da lista, ou simplesmente removê-lo (dado que haja mais de um Pokémon no time). Não é permitido aumentar o tamanho do time, ainda
+que ele não contenha o máximo de 6 Pokémon, após selecionada a opção [f] de finalização. Assim que o primeiro jogador terminar essa etapa 
+o segundo deve realizar 
