@@ -82,3 +82,13 @@ jogador de volta ao mapa, sem comprometer os Pokémon coletados até o momento.
 Ainda assim, ganhar a batalha também permite que o jogador retorne ao mapa.
 
 Assim como no modo anterior, o jogador perde quando todos os seus Pokémon são derrotados.
+
+
+# Observações acerca do código
+O código foi implementado tendo como base o formato apresentado na lista 06, ou seja utilizando de classes derivadas de Event e
+Controller. A fim de melhor enquadrar as demandas do código, porém, foram feitas alterações nas duas classes.
+
+Assim, cada uma das ações de cada jogador dentro de uma batalha é uma classe do tipo Event, e todas são controladas por uma Controller.
+Além disso, cada treinador é um objeto de uma classe Trainer e cada Pokémon é um objeto de uma classe Pokémon.
+
+Para colocar a informação de cada um dos 151 Pokémon, foi utilizado um arquivo .txt, o qual é lido toda vez que é necessário buscar informações sobre algum Pokémon.
