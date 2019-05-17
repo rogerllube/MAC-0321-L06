@@ -59,16 +59,16 @@ retorna-se à tela inicial do jogo onde escolhe-se o modo a ser jogado.
 
 ### Solo
 Escolhendo a opção [2], o usuário deve digitar seu nome. Confirmado o nome, o jogador escolhe 1 Pokémon dos 151 disponíveis na lista
-impressa. O jogador pode alterar o Pokémon inicial quantas vezes quiser antes de começar a, de fato, jogar pressionando [a].
+impressa. O jogador pode alterar o Pokémon inicial quantas vezes quiser antes de começar a de fato jogar, pressionando [a].
 
-Terminada a fase preparatória, imprime-se um mapa. Nele, o jogador é representado pela letra P, e há 2 tipos de espaços: vazio e "*".
+Terminada a fase preparatória, imprime-se um mapa. Nele, o jogador é representado pela letra P, e há 2 tipos de espaços: vazio e " * ".
 O jogador pode andar pelo mapa escolhendo 1 dentre as 4 opções oferecidas: cima, baixo, esquerda e direita. Ao entrar em um espaço, o
-jogador pode ser atacado aleatoriamente por um dos 151 Pokémon da lista. A chance de ser atacado é de 50% nos espaços "*" e de 0% nos
+jogador pode ser atacado aleatoriamente por um dos 151 Pokémon da lista. A chance de ser atacado é de 50% nos espaços " * " e de 0% nos
 espaços vazios.
 
 Ao ser atacado por um Pokémon, o jogador entra em uma batalha com moldes similares aos do modo multiplayer, uma vez que ela é resolvida 
 em turnos e há as 4 opções de ações a serem feitas. Todavia, neste modo de jogo a batalha não tem como único objetivo a derrota do 
-adversário, há também a possibilidade de capturar o Pokémon selvagem e adicioná-lo ao seu time.
+adversário, há também a possibilidade de captura do Pokémon selvagem para adicioná-lo ao seu time.
 
 Para tanto, a opção usar item difere-se do outro modo por permitir que escolha-se utilizar 1 "potion" para recuperar vida de seus
 Pokémon, atentado-se às mecânicas apresentadas anteriormente, ou utilizar uma "pokéball" para capturar o Pokémon adversário. A chance de
