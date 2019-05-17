@@ -35,15 +35,20 @@ dentro da lista, ou simplesmente removê-lo (dado que haja mais de um Pokémon n
 que ele não contenha o máximo de 6 Pokémon, após selecionada a opção [f] de finalização. Posteriormente o segundo jogador também deve
 realizar a mesma operação. 
 
-Terminada essa fase preparatória, inicia-se a batalha. Ela é organizada em turnos, ou seja, a cada turno cada jogador poderá escolher 1
+Terminada essa fase preparatória, inicia-se a batalha. Ela é organizada em turnos, ou seja, a cada turno os jogadores poderão escolher 1
 dentre 4 opções de ações possíveis, as quais são: 
 ataque, usar item, trocar de Pokémon e fugir da batalha.
 
 Ao optar por atacar, deve-se escolher 1 dentre 4 movimentos disponíveis, cada qual pode causar diferentes quantidades de dano, baseado
-no tipo do ataque e característica do Pokémon alvo, tais como defesa e tipo.
+no tipo do ataque e característica do Pokémon alvo, tais como defesa e tipo. Se ambos os jogadores optarem por atacar, aquele que
+possuir o Pokémon com maior atributo "speed" atacará primeiro. Se ambos possuírem a mesma "speed", o jogo escolherá aleatóriamente quem
+deve atacar primeiro.
 
 Usar item permite que um dos Pokemon da equipe possa recuperar 20 pontos de vida. A escolha do Pokémon que recuperará vida será feita
 após a exibição de uma lista com cada um dos Pokémon do time e seus respectivos pontos de vida. Vale lembar que há um número limitado de
 6 itens a ser utilizado. Se todos os Pokémon estiverem com vida máxima, a escolha da opção usar item resultará em um turno perdido.
 
-Trocar Pokémon permite que o jogador possa trocar o Pokémon em batalha.
+Trocar Pokémon permite que o jogador possa colocar outro Pokémon do time em batalha. Apenas Pokémon com pontos de vida superiores a 0
+podem entrar em uma batalha. Se o único Pokémon que possa entrar em batalha for aquele sendo utilizado, a escolha dessa opção resulatará em turno perdido.
+
+Fugir resulta na vitória automática do jogador adversário.
