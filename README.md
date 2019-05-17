@@ -20,12 +20,11 @@ apenas 1 pode jogar.
 O modo multijogador consiste em uma simulação de uma batalha Pokémon, ou seja, cada jogador escolhe de 1 a 6 Pokémon e
 posteriormente realizam uma batalha com seus respectivos Pokémon. Ao derrotar todos os Pokémon do adversário ganha-se uma partida.
 
-Quando escolhida a opção solo, o jogador escolhe apenas 1 Pokémon e o objetivo do jogo torna-se capturar e batalhar contra Pokémon 
-aleatórios espalhados pelo mapa.
+Quando escolhida a opção solo, o jogador escolhe apenas 1 Pokémon e o objetivo do jogo torna-se capturar e batalhar contra Pokémon aleatórios espalhados pelo mapa.
 
 # Como jogar
-Ao iniciar o programa na classe Jogo, o usuário depara-se com uma tela inicial na qual escolhe-se o modo de jogo desejado, devendo-se apertar a 
-tecla [1] se quiser escolher multiplayer ou [2] se quiser solo. 
+Deve-se iniciar o programa na classe Jogo. Após iniciar o jogo, o usuário depara-se com uma tela inicial na qual escolhe-se o
+modo de jogo desejado, devendo-se apertar a tecla [1] se quiser escolher multiplayer ou [2] se quiser solo. 
 ### Multiplayer
 Escolhendo a opção [1], cada jogador deve digitar seu nome. Assim que confirmados os nomes, o primeiro jogador escolhe os Pokémon que 
 gostaria de utilizar na batalha. Ele poderá escolher até 6, de uma lista impressa na tela contendo 151 Pokémon. Vale-se ressaltar que uma vez selecionada a opção de finalizar a seleção do seu time, será possível a alteração do mesmo. Essa alteração será disponível 
