@@ -26,7 +26,7 @@ aleatórios espalhados pelo mapa.
 # Como jogar
 Ao iniciar o programa, o usuário depara-se com uma tela inicial na qual escolhe-se o modo de jogo desejado, devendo-se apertar a 
 tecla [1] se quiser escolher multiplayer ou [2] se quiser solo. 
-
+### Multiplayer
 Escolhendo a opção [1], cada jogador deve digitar seu nome. Assim que confirmados os nomes, o primeiro jogador escolhe os Pokémon que 
 gostaria de utilizar na batalha. Ele poderá escolher até 6, de uma lista impressa na tela contendo 151 Pokémon. Vale-se ressaltar que uma
 vez selecionada a opção de finalizar a seleção do seu time, será possível a alteração do mesmo. Essa alteração será disponível 
@@ -49,6 +49,11 @@ após a exibição de uma lista com cada um dos Pokémon do time e seus respecti
 6 itens a ser utilizado. Se todos os Pokémon estiverem com vida máxima, a escolha da opção usar item resultará em um turno perdido.
 
 Trocar Pokémon permite que o jogador possa colocar outro Pokémon do time em batalha. Apenas Pokémon com pontos de vida superiores a 0
-podem entrar em uma batalha. Se o único Pokémon que possa entrar em batalha for aquele sendo utilizado, a escolha dessa opção resulatará em turno perdido.
+podem entrar em uma batalha. Se o único Pokémon que possa entrar em batalha for aquele sendo utilizado, a escolha dessa opção resultará em turno perdido.
 
-Fugir resulta na vitória automática do jogador adversário.
+Fugir provoca a vitória automática do jogador adversário.
+
+Ao escolher uma das opções de ação não será possível redefinir sua escolha num mesmo turno.
+
+Uma vez que um dos jogadores tenha todos os seus Pokémon derrotados, a batalha termina com o anúncio do vencedor. Posteriormente 
+retorna-se à tela inicial do jogo onde escolhe-se o modo a ser jogado.
