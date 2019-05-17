@@ -94,5 +94,6 @@ Além disso, cada treinador é um objeto de uma classe Trainer e cada Pokémon �
 Para colocar a informação de cada um dos 151 Pokémon, foi utilizado um arquivo .txt, o qual é lido toda vez que é necessário buscar
 informações sobre algum Pokémon.
 
-A efetividade e dano de cada movimento é calculada na classe Calc, a qual verifica a efetividade de cada golpe de acordo com uma tabela
-feita na classe Tabela.
+A efetividade e dano de cada movimento é calculada na classe Calc, a qual verifica a efetividade de cada golpe de acordo com uma tabela feita na classe Tabela.
+
+A classe Jogo contém a main que roda o jogo, ela irá chamar ou o Controller do modo multijogador ou o do modo solo, de nomes Battle e Wild, respectivamente. Dentro dos controles, há as clases extendidas de Event que realizarão o processo do jogo, utilizando do método addEvent. Os treinadores terão métodos que auxiliam na sua identificação e utilização de Pokémon, os quais serão armazenados numa array de Pokémon. Para eles foi feita uma classe que identifica as característica de cada Pokémon, como pontos de vida, ataqe e defesa.
