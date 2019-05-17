@@ -91,4 +91,8 @@ Controller. A fim de melhor enquadrar as demandas do código, porém, foram feit
 Assim, cada uma das ações de cada jogador dentro de uma batalha é uma classe do tipo Event, e todas são controladas por uma Controller.
 Além disso, cada treinador é um objeto de uma classe Trainer e cada Pokémon é um objeto de uma classe Pokémon.
 
-Para colocar a informação de cada um dos 151 Pokémon, foi utilizado um arquivo .txt, o qual é lido toda vez que é necessário buscar informações sobre algum Pokémon.
+Para colocar a informação de cada um dos 151 Pokémon, foi utilizado um arquivo .txt, o qual é lido toda vez que é necessário buscar
+informações sobre algum Pokémon.
+
+A efetividade e dano de cada movimento é calculada na classe Calc, a qual verifica a efetividade de cada golpe de acordo com uma tabela
+feita na classe Tabela.
