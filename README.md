@@ -32,5 +32,10 @@ gostaria de utilizar na batalha. Ele poderá escolher até 6, de uma lista impre
 vez selecionada a opção de finalizar a seleção do seu time, será possível a alteração do mesmo. Essa alteração será disponível 
 apenas imediatamente após o jogador selecionar [f] para finalizar o time e permitirá que ele possa trocar um Pokémon escolhido por outro
 dentro da lista, ou simplesmente removê-lo (dado que haja mais de um Pokémon no time). Não é permitido aumentar o tamanho do time, ainda
-que ele não contenha o máximo de 6 Pokémon, após selecionada a opção [f] de finalização. Assim que o primeiro jogador terminar essa etapa 
-o segundo deve realizar 
+que ele não contenha o máximo de 6 Pokémon, após selecionada a opção [f] de finalização. Posteriormente o segundo jogador também deve
+realizar a mesma operação. 
+
+Terminada essa fase preparatória, inicia-se a batalha. Cada jogador poderá escolher 1 dentre 4 opções de ações possíveis, as quais são: 
+ataque, usar item, trocar de Pokémon e fugir da batalha. Ao optar por atacar, deve-se escolher 1 dentre 4 movimentos disponíveis, cada
+qual pode causar diferentes quantidades de dano, baseado no tipo do ataque e característica do Pokémon alvo, tais como defesa e tipo. 
+
