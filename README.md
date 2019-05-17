@@ -59,9 +59,26 @@ retorna-se à tela inicial do jogo onde escolhe-se o modo a ser jogado.
 
 ### Solo
 Escolhendo a opção [2], o usuário deve digitar seu nome. Confirmado o nome, o jogador escolhe 1 Pokémon dos 151 disponíveis na lista
-impressa. O jogador pode alterar o Pokémon inicial quantas vezes quiser antes de começar a, de fato, jogar ao pressionar [a].
+impressa. O jogador pode alterar o Pokémon inicial quantas vezes quiser antes de começar a, de fato, jogar pressionando [a].
 
 Terminada a fase preparatória, imprime-se um mapa. Nele, o jogador é representado pela letra P, e há 2 tipos de espaços: vazio e "*".
 O jogador pode andar pelo mapa escolhendo 1 dentre as 4 opções oferecidas: cima, baixo, esquerda e direita. Ao entrar em um espaço, o
 jogador pode ser atacado aleatoriamente por um dos 151 Pokémon da lista. A chance de ser atacado é de 50% nos espaços "*" e de 0% nos
 espaços vazios.
+
+Ao ser atacado por um Pokémon, o jogador entra em uma batalha com moldes similares aos do modo multiplayer, uma vez que ela é resolvida 
+em turnos e há as 4 opções de ações a serem feitas. Todavia, neste modo de jogo a batalha não tem como único objetivo a derrota do 
+adversário, há também a possibilidade de capturar o Pokémon selvagem e adicioná-lo ao seu time.
+
+Para tanto, a opção usar item difere-se do outro modo por permitir que escolha-se utilizar 1 "potion" para recuperar vida de seus
+Pokémon, atentado-se às mecânicas apresentadas anteriormente, ou utilizar uma "pokéball" para capturar o Pokémon adversário. A chance de
+sucesso de uma captura aumenta conforme os pontos de vida do Pokémon dimnuem. Vale ressaltar que se o seu time já estiver completo com 
+o limite de 6 Pokémon possíveis, é dada a alternativa de trocar um dos atuais pelo capturado, basta apertar [s] quando for solicitado.
+O jogador começa com 100 "pokéballs", sendo impossível a reposição das mesmas.
+
+Como o propósito deste modo não gira em torno de ganhar batalhas, mas explorar os Pokémon disponíveis, a opção fugir apenas traz o
+jogador de volta ao mapa, sem comprometer os Pokémon coletados até o momento.
+
+Ainda assim, ganhar a batalha também permite que o jogador retorne ao mapa.
+
+Assim como no modo anterior, o jogador perde quando todos os seus Pokémon são derrotados.
