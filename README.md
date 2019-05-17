@@ -28,8 +28,7 @@ Ao iniciar o programa, o usuário depara-se com uma tela inicial na qual escolhe
 tecla [1] se quiser escolher multiplayer ou [2] se quiser solo. 
 ### Multiplayer
 Escolhendo a opção [1], cada jogador deve digitar seu nome. Assim que confirmados os nomes, o primeiro jogador escolhe os Pokémon que 
-gostaria de utilizar na batalha. Ele poderá escolher até 6, de uma lista impressa na tela contendo 151 Pokémon. Vale-se ressaltar que uma
-vez selecionada a opção de finalizar a seleção do seu time, será possível a alteração do mesmo. Essa alteração será disponível 
+gostaria de utilizar na batalha. Ele poderá escolher até 6, de uma lista impressa na tela contendo 151 Pokémon. Vale-se ressaltar que uma vez selecionada a opção de finalizar a seleção do seu time, será possível a alteração do mesmo. Essa alteração será disponível 
 apenas imediatamente após o jogador selecionar [f] para finalizar o time e permitirá que ele possa trocar um Pokémon escolhido por outro
 dentro da lista, ou simplesmente removê-lo (dado que haja mais de um Pokémon no time). Não é permitido aumentar o tamanho do time, ainda
 que ele não contenha o máximo de 6 Pokémon, após selecionada a opção [f] de finalização. Posteriormente o segundo jogador também deve
@@ -57,3 +56,12 @@ Ao escolher uma das opções de ação não será possível redefinir sua escolh
 
 Uma vez que um dos jogadores tenha todos os seus Pokémon derrotados, a batalha termina com o anúncio do vencedor. Posteriormente 
 retorna-se à tela inicial do jogo onde escolhe-se o modo a ser jogado.
+
+### Solo
+Escolhendo a opção [2], o usuário deve digitar seu nome. Confirmado o nome, o jogador escolhe 1 Pokémon dos 151 disponíveis na lista
+impressa. O jogador pode alterar o Pokémon inicial quantas vezes quiser antes de começar a, de fato, jogar ao pressionar [a].
+
+Terminada a fase preparatória, imprime-se um mapa. Nele, o jogador é representado pela letra P, e há 2 tipos de espaços: vazio e "*".
+O jogador pode andar pelo mapa escolhendo 1 dentre as 4 opções oferecidas: cima, baixo, esquerda e direita. Ao entrar em um espaço, o
+jogador pode ser atacado aleatoriamente por um dos 151 Pokémon da lista. A chance de ser atacado é de 50% nos espaços "*" e de 0% nos
+espaços vazios.
