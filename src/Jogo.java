@@ -18,8 +18,6 @@ public class Jogo {
 				adventure.addEvent(adventure.new Begin());
 				adventure.run();
 			}
-			else
-				break;
 		}
 	}
 }

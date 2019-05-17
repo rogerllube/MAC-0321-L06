@@ -18,7 +18,12 @@ class EventSet {
 	}
 	public void removeNext() {
 		events[next+1] = null;
+		next++;
 		
+	}
+	public void removeX(int x) {
+		events[next+x] = null;
+		next+=x;
 	}
 }
 
@@ -35,5 +40,8 @@ public class Controller {
 	}
 	public void removeNext() {
 		es.removeNext();
+	}
+	public void removeX(int x) {
+		es.removeX(x);
 	}
 }

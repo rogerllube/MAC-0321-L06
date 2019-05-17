@@ -113,7 +113,7 @@ public class Wild extends Controller{
 		int random;
 		Pokemon prov;
 		public void action() {
-			random = ThreadLocalRandom.current().nextInt(1, 4);
+			random = ThreadLocalRandom.current().nextInt(1, 152);
 			prov = Searcher.pesquisaPoke(random);
 			wildP = new Trainer(prov.getName());
 			wildP.addPokemon(random);
@@ -125,7 +125,6 @@ public class Wild extends Controller{
 	
 	private class CreateWildTurn extends Event{
 		public void action() {
-			int random;
 			System.out.println("");
 			System.out.println("TURNO " + turn);
 			System.out.println("");
@@ -156,8 +155,6 @@ public class Wild extends Controller{
 			
 			if (type1 == 4) {
 				addEvent(new Flee(p));
-				System.out.println(p.getName() + " fugiu com sucesso");
-				addEvent(new CheckEnd(p, wildP));
 			}
 			if (type1 == 3)
 				addEvent(new Swap(p));
@@ -211,6 +208,11 @@ public class Wild extends Controller{
 		public void action() {
 			p.setOver(true);	
 			p.setRun(true);
+			System.out.println(p.getName() + " fugiu com sucesso");
+			addEvent(new Walk());
+			removeNext();
+			removeX(2);
+			turn =1;
 		}
 	}
 	
@@ -344,7 +346,6 @@ public class Wild extends Controller{
 		a = action;
 		p = t;
 		}
-		
 		public void action() {
 			int damage;
 			int random = ThreadLocalRandom.current().nextInt(1, 5);
@@ -389,85 +390,13 @@ public class Wild extends Controller{
 	}
 	
 	
-	private class FirstWildAttack extends Event {
 	
-		Action a;
-		Trainer p;
-		
-		public FirstWildAttack(Action action, Trainer t) {
-			a = action;
-			p = t;
-		}
-		public void action() {
-			int damage;
-			boolean morreu = false;
-			int hp, troca;
-			int random = ThreadLocalRandom.current().nextInt(1, 5);
-			Trainer ta = a.getTrainer();
-			Pokemon pokeA = ta.getActivePoke();
-			Move atk = pokeA.getMove(random); 
-			Trainer td = p;
-			Pokemon pokeD = td.getActivePoke();
-		
-			Pokemon morto, substituto;
-		
-			Move esc = pokeD.chooseAtk(scanner, td);
-			
-			damage = Calc.Dano(atk, pokeA, pokeD);
-			hp = pokeD.getHp();
-			if(hp - damage <= 0) {
-				pokeD.setHp(0);
-				System.out.println(pokeA.getName()+ " atacou " +pokeD.getName()+ " com " +atk.getName()+ "!"+ System.lineSeparator() +pokeD.getName()+ " não tem mais hp");
-				td.setLeft();
-				
-				if(td.getLeft() != 0) {
-					System.out.println("Escolha outro pokémon");
-					td.getPokeList();
-					troca = scanner.nextInt();
-					troca = td.setAtivo(troca, scanner);
-					morto = p.getPoke(p.getActive());
-					substituto = p.getPoke(troca);
-					p.setPoke(substituto, p.getActive());
-					p.setPoke(morto, troca);
-					morreu = true;		
-				}
-				else {
-					morreu = true;
-					td.setOver(true);
-				}
-			}
-			else{
-				pokeD.setHp(hp - damage);
-				System.out.println(pokeA.getName()+ " atacou " +pokeD.getName() + " com " +atk.getName()+ "!"+ System.lineSeparator() +pokeD.getName()+ " tem " +pokeD.getHp()+ " de vida restando");
-				System.out.println("");
-			}
-			if(morreu != true) {
-				damage = Calc.Dano(esc, pokeD, pokeA);
-				hp = pokeA.getHp();
-				if(hp - damage <= 0) {
-					pokeD.setHp(0);
-					System.out.println(pokeD.getName()+ " atacou " +pokeA.getName()+ " com " +esc.getName()+ "!"+ System.lineSeparator() +pokeA.getName()+ " não tem mais hp");
-					System.out.println("");
-					td.setLeft();
-					ta.setOver(true);
-					morreu = true;
-				}
-				else{
-					pokeA.setHp(hp - damage);
-					System.out.println(pokeD.getName()+ " atacou " +pokeA.getName() + " com " +esc.getName()+ "!"+ System.lineSeparator() +pokeA.getName()+ " tem " +pokeA.getHp()+ " de vida restando");
-					System.out.println("");
-				}
-			}
-		}
-		
-	}	
 	private class CheckEnd extends Event{
-		Trainer ta, tb;
-		int win = turn-1;
+		Trainer ta;
+		int win = turn;
 	
 		public CheckEnd(Trainer a, Trainer b) {
 			ta = a;
-			tb = b;
 		}
 		public void action() {
 			if(ta.getCapture()) {
@@ -475,34 +404,24 @@ public class Wild extends Controller{
 				ta.setCapture(false);
 				removeNext();
 				addEvent(new Walk());
+				removeX(2);
 			}
-			else if(ta.getRun() == true) {
-				turn = 1;
-				ta.setRun(false);
-				removeNext();
-				addEvent(new Walk());
-			}
-			else if(ta.getOver() ) {
+			else if(ta.getOver() && !ta.getRun()) {
 				if(ta.getHuman()) {
 					System.out.println(ta.getName() + " não possui mais Pokemon"+System.lineSeparator()+ ta.getName()+" fugiu em "+turn+ " turnos.");
 					removeNext();
-					return;
-				}
+					removeX(8);
+					}
 				else {
-					turn = 1;
+					addEvent(new Walk());
 					System.out.println(ta.getName() + " desmaiou!!!"+System.lineSeparator()+"Voce venceu em "+ win +" turnos.");
 					removeNext();
-					addEvent(new Walk());
+					removeX(2);
+					turn = 1;
 				}
 			}
-			else if(!ta.getPatt()) {
-				removeNext();
-				addEvent(new CreateWildTurn());
-			}
-			
 		}
 	}
-	
 }
 	
 
