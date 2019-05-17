@@ -75,7 +75,7 @@ public class Battle extends Controller {
 			if (type1>=type2) {
 				if (type1 == 4) {
 					addEvent(new Flee(p1));
-					addEvent(new CheckEnd(p2,p1));
+					addEvent(new CheckEnd(p2,p1,2));
 				}
 				if (type1 == 3)
 					addEvent(new Swap(p1));
@@ -84,49 +84,49 @@ public class Battle extends Controller {
 				if(type1 == 1) {
 					if(a1.getMove().getPriority()>a2.getMove().getPriority()) {
 						addEvent(new Attack(a1, p2));
-						addEvent(new CheckEnd(p1, p2));
+						addEvent(new CheckEnd(p1, p2,1));
 						addEvent(new Attack(a2, p1));
-						addEvent(new CheckEnd(p2,p1));
+						addEvent(new CheckEnd(p2,p1,2));
 					}
 					if(a2.getMove().getPriority()>a1.getMove().getPriority()) {
 						addEvent(new Attack(a2, p1));
-						addEvent(new CheckEnd(p2, p1));
+						addEvent(new CheckEnd(p2, p1,1));
 						addEvent(new Attack(a1, p2));
-						addEvent(new CheckEnd(p1,p2));
+						addEvent(new CheckEnd(p1,p2,2));
 					}
 					if(a1.getMove().getPriority() == a2.getMove().getPriority()) {
 						if (p1.getActivePoke().getSpeed() > p2.getActivePoke().getSpeed()) {
 							addEvent(new Attack(a1, p2));
-							addEvent(new CheckEnd(p1, p2));
+							addEvent(new CheckEnd(p1, p2,1));
 							addEvent(new Attack(a2, p1));
-							addEvent(new CheckEnd(p2,p1));
+							addEvent(new CheckEnd(p2,p1,2));
 						}
 						else if (p1.getActivePoke().getSpeed() < p2.getActivePoke().getSpeed()) {
 							addEvent(new Attack(a2, p1));
-							addEvent(new CheckEnd(p2, p1));
+							addEvent(new CheckEnd(p2, p1,1));
 							addEvent(new Attack(a1, p2));
-							addEvent(new CheckEnd(p1,p2));
+							addEvent(new CheckEnd(p1,p2,2));
 						}
 						else {
 							tie = ThreadLocalRandom.current().nextInt(0, 2);
 							if (tie == 0) {
 								addEvent(new Attack(a1, p2));
-								addEvent(new CheckEnd(p1,p2));
+								addEvent(new CheckEnd(p1,p2,1));
 								addEvent(new Attack(a2, p1));
-								addEvent(new CheckEnd(p2,p1));
+								addEvent(new CheckEnd(p2,p1,2));
 								}
 							else {
 								addEvent(new Attack(a2, p1));
-								addEvent(new CheckEnd(p2,p1));
+								addEvent(new CheckEnd(p2,p1,1));
 								addEvent(new Attack(a1, p2));
-								addEvent (new CheckEnd(p1,p2));
+								addEvent (new CheckEnd(p1,p2,2));
 							}
 						}
 					}
 				}
 				if (type2 == 4) {
 					addEvent(new Flee(p2));
-					addEvent(new CheckEnd(p1,p2));
+					addEvent(new CheckEnd(p1,p2,2));
 				}
 				if (type2 == 3)
 					addEvent(new Swap(p2));
@@ -134,13 +134,13 @@ public class Battle extends Controller {
 					addEvent(new Item(p2));	
 				if (type2 == 1 && type1 != 1) {
 					addEvent(new Attack(a2, p1));
-					addEvent(new CheckEnd(p2,p1));
+					addEvent(new CheckEnd(p2,p1,2));
 				}
 			}
 			if (type2>type1) {
 				if (type2 == 4) {
 					addEvent(new Flee(p2));
-					addEvent(new CheckEnd(p1,p2));
+					addEvent(new CheckEnd(p1,p2,2));
 			}
 				if (type2 == 3)
 					addEvent(new Swap(p2));
@@ -148,7 +148,7 @@ public class Battle extends Controller {
 					addEvent(new Item(p2));
 				if (type1 == 4) {
 					addEvent(new Flee(p1));
-					addEvent(new CheckEnd(p2,p1));
+					addEvent(new CheckEnd(p2,p1,2));
 				}
 				if (type1 == 3)
 					addEvent(new Swap(p1));
@@ -156,7 +156,7 @@ public class Battle extends Controller {
 					addEvent(new Item(p1));
 				if(type1 == 1) {
 					addEvent(new Attack(a1, p2));
-					addEvent(new CheckEnd(p1,p2));
+					addEvent(new CheckEnd(p1,p2,2));
 				}
 			}
 			turn++;
@@ -284,15 +284,20 @@ public class Battle extends Controller {
 	}
 	private class CheckEnd extends Event{
 		Trainer ta, tb;
-		int win = turn-1;
-		public CheckEnd(Trainer a, Trainer b) {
+		int i;
+		int win = turn;
+		public CheckEnd(Trainer a, Trainer b, int i) {
 			ta = a;
 			tb = b;
+			this.i = i;
 		}
 		public void action() {
 			if(tb.getOver() ) {
 				System.out.println(ta.getName() + " e o vencedor. Parabens!!!"+System.lineSeparator()+"Voce venceu em "+ win +" turnos.");
 				removeNext();
+				if(i == 1) {
+					removeX(2);
+				}
 				return;
 			}
 			else if(!tb.getPatt()) {
