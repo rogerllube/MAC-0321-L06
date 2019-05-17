@@ -24,7 +24,7 @@ Quando escolhida a opção solo, o jogador escolhe apenas 1 Pokémon e o objetiv
 aleatórios espalhados pelo mapa.
 
 # Como jogar
-Ao iniciar o programa, o usuário depara-se com uma tela inicial na qual escolhe-se o modo de jogo desejado, devendo-se apertar a 
+Ao iniciar o programa a classe Jogo, o usuário depara-se com uma tela inicial na qual escolhe-se o modo de jogo desejado, devendo-se apertar a 
 tecla [1] se quiser escolher multiplayer ou [2] se quiser solo. 
 ### Multiplayer
 Escolhendo a opção [1], cada jogador deve digitar seu nome. Assim que confirmados os nomes, o primeiro jogador escolhe os Pokémon que 
